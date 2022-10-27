@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Joseph Guarino</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1 {font-family: "Montserrat", sans-serif}
+img {margin-bottom: -7px}
+.w3-row-padding img {margin-bottom: 12px}
+</style>
+</head>
+<body>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+  <!-- Header -->
+  <header class="w3-container w3-xlarge w3-padding-24">
+<!--    <a href="#" class="w3-left w3-button w3-white">Joseph Guarino</a> -->
+
+        <a class="w3-left w3-button w3-white"><href="https://www.instagram.com/joegurino/" class="button">Joseph Guarino</a>
+        <a class="#"><button class="w3-right w3-button w3-white" onclick="myFunction()">Toggle Grid Padding</button></a>
+
+        <!--
+        ## Instagram Logo (Need to set up button)
+        ## Second one works but is shown like a link
+
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <a href="https://www.instagram.com/joegurino/" class="button">Joseph Guarino</a>
+        -->
+  </header>
+
+  <!-- Photo Grid -->
+  <div class="w3-row" id="myGrid" style="margin-bottom:128px">
+    <div class="w3-third">
+      <img src="mountainglow.jpg" style="width:100%">
+      <img src="alpinesunset.jpg" style="width:100%">
+      <img src="clockonfilm.jpg" style="width:100%">
+      <img src="ropebridge.jpg" style="width:100%">
+      <img src="sunsetsign.jpg" style="width:100%">
+      <img src="treemountain.jpg" style="width:100%">
+    </div>
+
+    <div class="w3-third">
+      <img src="cavereflection.jpg" style="width:100%">
+      <img src="rustedcar.jpg" style="width:100%">
+      <img src="mountainlake.jpg" style="width:100%">
+      <img src="mountainsunset.jpg" style="width:100%">
+      <img src="fence.jpg" style="width:100%">
+      <img src="powerlines.jpg" style="width:100%">
+    </div>
+
+    <div class="w3-third">
+      <img src="craterlake.jpg" style="width:100%">
+      <img src="narrows.jpg" style="width:100%">
+      <img src="person.jpg" style="width:100%">
+      <img src="motorcycle.jpg" style="width:100%">
+      <img src="saltflatssunrise.jpg" style="width:100%">
+      <img src="moon.jpg" style="width:100%">
+    </div>
+  </div>
+
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-12 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px">
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+<script>
+// Toggle grid padding
+function myFunction() {
+  var x = document.getElementById("myGrid");
+  if (x.className === "w3-row") {
+    x.className = "w3-row-padding";
+  } else {
+    x.className = x.className.replace("w3-row-padding", "w3-row");
+  }
+}
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
