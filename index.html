@@ -5,12 +5,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
 <style>
 img {margin-bottom: -7px}
 .w3-row-padding img {margin-bottom: 12px}
 </style>
-
 </head>
 <body>
 
@@ -26,27 +24,11 @@ img {margin-bottom: -7px}
   <a href="#Otherworks" onclick="w3_close()" class="w3-bar-item w3-button">Other Works</a>
 </nav>
 
-
-
-
-
-
-
-
 <!-- Top menu on small screens -->
 <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
   <a href="#home" class="w3-button w3-xxlarge w3-white w3-left"><font size="5px">Joseph Guarino</a>
   <a href="javascript:void(0)" class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()">☰</a>
 </header>
-
-
-<!--
-<span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-<a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
--->
-
-
-
 
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
@@ -76,12 +58,10 @@ img {margin-bottom: -7px}
     </div>
   </header>
 
-
   <!-- Photo grid Landscapes-->
   <div class="w3-container w3-padding-32" id="Landscapes">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Landscapes</h3>
   </div>
-
 
   <div class="w3-row" id="myGrid" style="margin-bottom:128px">
     <div class="w3-third">
@@ -89,13 +69,13 @@ img {margin-bottom: -7px}
       <img src="mountainlake.jpg" style="width:100%" onclick="onClick(this)" alt="Blue waters and green mountains">
       <img src="cavereflection.jpg" style="width:100%" onclick="onClick(this)" alt="A doorway hidden in the rocks">
       <img src="85456165.jpg" style="width:100%" onclick="onClick(this)">
-      <img src="DSC06390.jpg" style="width:100%" onclick="onClick(this)">
     </div>
 
     <div class="w3-third">
       <img src="craterlake.jpg" style="width:100%" onclick="onClick(this)" alt="Wizard Island">
       <img src="mountainglow.jpg" style="width:100%" onclick="onClick(this)" alt="Gloden sunset in the Cascade Mountains">
       <img src="narrows.jpg" style="width:100%" onclick="onClick(this)" alt="The Narrows">
+      <img src="DSC06390.JPG" style="width:100%" onclick="onClick(this)">
     </div>
 
     <div class="w3-third">
@@ -106,12 +86,10 @@ img {margin-bottom: -7px}
     </div>
   </div>
 
-
   <!-- Photo grid Astrophotography-->
   <div class="w3-container w3-padding-32" id="Astrophotography">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Astrophotography</h3>
   </div>
-
 
   <div class="w3-row" id="myGrid" style="margin-bottom:128px">
     <div class="w3-third">
@@ -132,7 +110,6 @@ img {margin-bottom: -7px}
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Wildlife</h3>
   </div>
 
-
   <div class="w3-row" id="myGrid" style="margin-bottom:128px">
     <div class="w3-third">
       <img src="DSC_0183.jpg" style="width:100%" onclick="onClick(this)">
@@ -149,12 +126,10 @@ img {margin-bottom: -7px}
     </div>
   </div>
 
-
   <!-- Photo grid Other Works-->
   <div class="w3-container w3-padding-32" id="Otherworks">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Other Works</h3>
   </div>
-
 
   <div class="w3-row" id="myGrid" style="margin-bottom:128px">
     <div class="w3-third">
@@ -173,9 +148,6 @@ img {margin-bottom: -7px}
     </div>
   </div>
 
-
-
-
   <!-- Modal for full size images on click-->
   <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
     <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
@@ -185,20 +157,12 @@ img {margin-bottom: -7px}
     </div>
   </div>
 
-
-
-
-
-
-
-
 <!-- End page content -->
 </div>
 
 <!-- Footer -->
   <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
-
 
 <script>
 // Toggle grid padding
@@ -222,7 +186,6 @@ function w3_close() {
   document.getElementById("myOverlay").style.display = "none";
 }
 
-
 // Modal Image Galleryfile:///C:/Users/josep/Documents/Github/Reworked%20Site/mountainglow.jpg
 function onClick(element) {
   document.getElementById("img01").src = element.src;
@@ -230,8 +193,6 @@ function onClick(element) {
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
-
 </script>
-
 </body>
 </html>
