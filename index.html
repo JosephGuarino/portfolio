@@ -8,6 +8,7 @@
 <style>
 img {margin-bottom: -7px}
 .w3-row-padding img {margin-bottom: 12px}
+.w3-third img{margin-bottom: -6px; cursor: pointer}
 </style>
 </head>
 <body>
@@ -58,6 +59,17 @@ img {margin-bottom: -7px}
     </div>
   </header>
 
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+
   <!-- Photo grid Landscapes-->
   <div class="w3-container w3-padding-32" id="Landscapes">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Landscapes</h3>
@@ -84,69 +96,67 @@ img {margin-bottom: -7px}
       <img src="mountaintrees.jpg" style="width:100%" onclick="onClick(this)" alt="A green valley">
       <img src="FullSizeRender.jpg" style="width:100%" onclick="onClick(this)">
     </div>
+
+
+    <!-- Photo grid Astrophotography-->
+    <div class="w3-container w3-padding-32" id="Astrophotography">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Astrophotography</h3>
+    </div>
+
+      <div class="w3-third">
+        <img src="August12th2020.bmp" style="width:100%" onclick="onClick(this)">
+      </div>
+
+      <div class="w3-third">
+        <img src="IMG_1364.jpg" style="width:100%" onclick="onClick(this)">
+      </div>
+
+      <div class="w3-third">
+        <img src="DSC_0064.jpg" style="width:100%" onclick="onClick(this)">
+      </div>
+
+
+    <!-- Photo grid Wildlife-->
+    <div class="w3-container w3-padding-32" id="Wildlife">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Wildlife</h3>
+    </div>
+
+      <div class="w3-third">
+        <img src="DSC_0183.jpg" style="width:100%" onclick="onClick(this)">
+        <img src="chipmunk1.jpg" style="width:100%" onclick="onClick(this)">
+      </div>
+
+      <div class="w3-third">
+        <img src="turtle1.jpg" style="width:100%" onclick="onClick(this)">
+        <img src="DSC_0207.jpg" style="width:100%" onclick="onClick(this)">
+      </div>
+
+      <div class="w3-third">
+        <img src="Hawk2.jpg" style="width:100%" onclick="onClick(this)">
+      </div>
+
+
+      <!-- Photo grid Other Works-->
+      <div class="w3-container w3-padding-32" id="Otherworks">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Other Works</h3>
+      </div>
+
+        <div class="w3-third">
+          <img src="clockonfilm.jpg" style="width:100%" onclick="onClick(this)" alt="35mm, 400 iso">
+          <img src="americanflag.jpg" style="width:100%" onclick="onClick(this)" alt="Hanging in the wind">
+        </div>
+
+        <div class="w3-third">
+          <img src="rustedcar.jpg" style="width:100%" onclick="onClick(this)" alt="Left to the rust">
+          <img src="endoftheroad.jpg" style="width:100%" onclick="onClick(this)" alt="Left to nature">
+        </div>
+
+        <div class="w3-third">
+          <img src="lightsonfilm.jpg" style="width:100%" onclick="onClick(this)" alt="35mm, 400 iso">
+          <img src="takingoff.jpg" style="width:100%" onclick="onClick(this)">
+        </div>
   </div>
 
-  <!-- Photo grid Astrophotography-->
-  <div class="w3-container w3-padding-32" id="Astrophotography">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Astrophotography</h3>
-  </div>
-
-  <div class="w3-row" id="myGrid" style="margin-bottom:128px">
-    <div class="w3-third">
-      <img src="August12th2020.bmp" style="width:100%" onclick="onClick(this)">
-    </div>
-
-    <div class="w3-third">
-      <img src="IMG_1364.jpg" style="width:100%" onclick="onClick(this)">
-    </div>
-
-    <div class="w3-third">
-      <img src="DSC_0064.jpg" style="width:100%" onclick="onClick(this)">
-    </div>
-  </div>
-
-  <!-- Photo grid Wildlife-->
-  <div class="w3-container w3-padding-32" id="Wildlife">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Wildlife</h3>
-  </div>
-
-  <div class="w3-row" id="myGrid" style="margin-bottom:128px">
-    <div class="w3-third">
-      <img src="DSC_0183.jpg" style="width:100%" onclick="onClick(this)">
-      <img src="chipmunk1.jpg" style="width:100%" onclick="onClick(this)">
-    </div>
-
-    <div class="w3-third">
-      <img src="turtle1.jpg" style="width:100%" onclick="onClick(this)">
-      <img src="DSC_0207.jpg" style="width:100%" onclick="onClick(this)">
-    </div>
-
-    <div class="w3-third">
-      <img src="Hawk2.jpg" style="width:100%" onclick="onClick(this)">
-    </div>
-  </div>
-
-  <!-- Photo grid Other Works-->
-  <div class="w3-container w3-padding-32" id="Otherworks">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Other Works</h3>
-  </div>
-
-  <div class="w3-row" id="myGrid" style="margin-bottom:128px">
-    <div class="w3-third">
-      <img src="clockonfilm.jpg" style="width:100%" onclick="onClick(this)" alt="35mm, 400 iso">
-      <img src="americanflag.jpg" style="width:100%" onclick="onClick(this)" alt="Hanging in the wind">
-    </div>
-
-    <div class="w3-third">
-      <img src="rustedcar.jpg" style="width:100%" onclick="onClick(this)" alt="Left to the rust">
-      <img src="endoftheroad.jpg" style="width:100%" onclick="onClick(this)" alt="Left to nature">
-    </div>
-
-    <div class="w3-third">
-      <img src="lightsonfilm.jpg" style="width:100%" onclick="onClick(this)" alt="35mm, 400 iso">
-      <img src="takingoff.jpg" style="width:100%" onclick="onClick(this)">
-    </div>
-  </div>
 
   <!-- Modal for full size images on click-->
   <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
