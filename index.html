@@ -6,9 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
-img {margin-bottom: -7px}
 .w3-row-padding img {margin-bottom: 12px}
 .w3-third img{margin-bottom: -6px; cursor: pointer}
+img {margin-bottom: -7px}
+.w3-row-padding img {margin-bottom: 12px}
 </style>
 </head>
 <body>
@@ -33,6 +34,20 @@ img {margin-bottom: -7px}
 
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+
+<!-- Navbar on small screens -->
+<!--
+<div class="w3-center w3-light-grey w3-padding-16 w3-hide-large w3-hide-medium">
+<div class="w3-bar w3-light-grey">
+  <a href="#Landscapes" class="w3-bar-item w3-button">Landscapes</a>
+  <a href="#Astrophotography" class="w3-bar-item w3-button">Astrophotography</a>
+  <a href="#Wildlife" class="w3-bar-item w3-button">Wildlife</a>
+  <a href="#Otherworks" class="w3-bar-item w3-button">Other Works</a>
+  </div>
+</div>
+-->
 
 <!-- Page content -->
 <div class="w3-main" style="margin-left:300px">
@@ -144,8 +159,7 @@ img {margin-bottom: -7px}
           <img src="lightsonfilm.jpg" style="width:100%" onclick="onClick(this)" alt="35mm, 400 iso">
           <img src="takingoff.jpg" style="width:100%" onclick="onClick(this)">
         </div>
-  </div>
-
+</div>
 
   <!-- Modal for full size images on click-->
   <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
@@ -160,8 +174,8 @@ img {margin-bottom: -7px}
 </div>
 
 <!-- Footer -->
+<footer class="w3-container w3-padding-10 w3-light-white w3-center w3-opacity w3-xlarge" style="margin-top:128px">
   <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
 
 <script>
 // Toggle grid padding
@@ -185,7 +199,7 @@ function w3_close() {
   document.getElementById("myOverlay").style.display = "none";
 }
 
-// Modal Image Galleryfile:///C:/Users/josep/Documents/Github/Reworked%20Site/mountainglow.jpg
+// Modal Image
 function onClick(element) {
   document.getElementById("img01").src = element.src;
   document.getElementById("modal01").style.display = "block";
