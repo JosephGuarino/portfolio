@@ -6,58 +6,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
-img {margin-bottom: -7px}
-.w3-row-padding img {margin-bottom: 12px}
-.w3-third img{margin-bottom: -6px; cursor: pointer}
+img {margin-bottom: 0px}
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", monospace}
+.w3-col img{margin-bottom: 0px; opacity: 0.8; cursor: pointer}
+.w3-col img:hover{opacity: 1}
 </style>
 </head>
 <body>
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
-  <h3 class="w3-padding-64 w3-center"><b>JOSEPH<br>GUARINO</b></h3>
-  <a class="#"><button class="w3-bar-item w3-button" onclick="myFunction()">Toggle Grid Padding</button></a>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
-  <a class="w3-bar-item"></a>
-  <a href="#Landscapes" onclick="w3_close()" class="w3-bar-item w3-button">Landscapes</a>
-  <a href="#Astrophotography" onclick="w3_close()" class="w3-bar-item w3-button">Astrophotography</a>
-  <a href="#Wildlife" onclick="w3_close()" class="w3-bar-item w3-button">Wildlife</a>
-  <a href="#Otherworks" onclick="w3_close()" class="w3-bar-item w3-button">Other Works</a>
-</nav>
+
 
 <!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge">
   <a href="#home" class="w3-button w3-xxlarge w3-white w3-left"><font size="5px">Joseph Guarino</a>
-  <a href="javascript:void(0)" class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()">☰</a>
 </header>
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-<!-- Navbar on small screens -->
-<div class="w3-center w3-light-grey w3-padding-16 w3-hide-large w3-hide-medium">
-<div class="w3-bar w3-light-grey">
-  <a href="#Landscapes" class="w3-bar-item w3-button">Landscapes</a>
-  <a href="#Astrophotography" class="w3-bar-item w3-button">Astrophotography</a>
-  <a href="#Wildlife" class="w3-bar-item w3-button">Wildlife</a>
-  <a href="#Otherworks" class="w3-bar-item w3-button">Other Works</a>
-  </div>
-</div>
+<!-- Push down content on small screens -->
+<div class="w3-hide-large" style="margin-top:-240px"></div>
+
 
 <!-- Page content -->
-<div class="w3-main" style="margin-left:300px">
-  <!-- Push down content on small screens -->
-  <div class="w3-hide-large" style="margin-top:83px"></div>
-
 <!-- Header -->
-  <header class="w3-display-container w3-content w3-center" style="max-width:1500px" id="home">
-    <img class="w3-image" src="mountainglow.jpg" alt="Me" width="1500" height="600">
-    <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center">
-      <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">JOSEPH GUARINO</h1>
-      <h5 class="w3-hide-large" style="white-space:nowrap">JOSEPH GUARINO</h5>
-      <h3 class="w3-hide-medium w3-hide-small">AMATEUR PHOTOGRAPHER</h3>
-    </div>
-  </header>
+
+<header class="w3-panel w3-center w3-opacity" style="padding:50px 16px">
+      <img class="w3-image" src="logo.jpg" width="150" height="150" style="padding:40px 8px">
+      <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">Joseph Guarino</h1>
+      <h3 class="w3-hide-medium w3-hide-small">Amateur Photography</h3>
+</header>
 
 
   <!-- Modal for full size images on click-->
@@ -70,106 +46,57 @@ img {margin-bottom: -7px}
   </div>
 
 
-  <!-- Photo grid Landscapes-->
-  <div class="w3-container w3-padding-32" id="Landscapes">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Landscapes</h3>
-  </div>
-
+  <!-- Photo grid-->
   <div class="w3-row" id="myGrid" style="margin-bottom:128px">
-    <div class="w3-third">
-      <img src="alpinesunset.jpg" style="width:100%" onclick="onClick(this)" alt="Sunset from an alpine lake high in the Cascade Mountains">
-      <img src="mountainlake.jpg" style="width:100%" onclick="onClick(this)" alt="Blue waters and green mountains">
-      <img src="cavereflection.jpg" style="width:100%" onclick="onClick(this)" alt="A doorway hidden in the rocks">
-      <img src="85456165.jpg" style="width:100%" onclick="onClick(this)">
-      <img src="DSC_0129.jpg" style="width:100%" onclick="onClick(this)">
-      <img src="IMG-3635.jpg" style="width:100%" onclick="onClick(this)">
+    <div class="w3-col" style="width:20%">
+      <img src="alpinesunset.jpg" style="width:100%" onclick="onClick(this)" alt="Lassen National Park, 2022; Sony a6000">
+      <img src="cavereflection.jpg" style="width:100%" onclick="onClick(this)" alt="Channel Islands, 2022; Nikon D3000">
+      <img src="takingoff.jpg" style="width:100%" onclick="onClick(this)" alt="2022; Nikon D3000">
+      <img src="mountainlake.jpg" style="width:100%" onclick="onClick(this)" alt="Lassen National Park, 2022; Sony a6000">
+      <img src="lightsonfilm.jpg" style="width:100%" onclick="onClick(this)" alt="2022; Minolta x700">
+      <img src="clockonfilm.jpg" style="width:100%" onclick="onClick(this)" alt="2022; Minolta x700">
+      <img src="deer1.jpg" style="width:100%" onclick="onClick(this)" alt="Mt. Wheeler, 2022; Nikon D3000">
     </div>
 
-    <div class="w3-third">
-      <img src="craterlake.jpg" style="width:100%" onclick="onClick(this)" alt="Wizard Island">
-      <img src="mountainglow.jpg" style="width:100%" onclick="onClick(this)" alt="Gloden sunset in the Cascade Mountains">
-      <img src="narrows.jpg" style="width:100%" onclick="onClick(this)" alt="The Narrows">
-      <img src="DSC06390.JPG" style="width:100%" onclick="onClick(this)">
-      <img src="DSC_0311.jpg" style="width:100%" onclick="onClick(this)">
-      <img src="IMG-3198.jpg" style="width:100%" onclick="onClick(this)">
-      <img src="DSC_4797.jpg" style="width:100%" onclick="onClick(this)">
+    <div class="w3-col" style="width:20%">
+      <img src="August12th2020.bmp" style="width:100%" onclick="onClick(this)" alt="2020; Nikon D3000">
+      <img src="craterlake.jpg" style="width:100%" onclick="onClick(this)" alt="Crater Lake, 2022; Sony a6000">
+      <img src="narrows.jpg" style="width:100%" onclick="onClick(this)" alt="Antelope Canyon, 2022">
+      <img src="saltflatssunrise.jpg" style="width:100%" onclick="onClick(this)" alt="Bonneville Salt Flats, 2022; Nikon D3000">
+      <img src="mountaintrees.jpg" style="width:100%" onclick="onClick(this)" alt="Lassen National Park, 2022; Sony a6000">
+      <img src="IMG-3198.jpg" style="width:100%" onclick="onClick(this)" alt="Mt. Wheeler, 2022; Nikon D3000">
+      <img src="DSC_0311.jpg" style="width:100%" onclick="onClick(this)" alt="Nikon D3000">
     </div>
 
-    <div class="w3-third">
-      <img src="fence.jpg" style="width:100%" onclick="onClick(this)" alt="Amber waves of grain">
-      <img src="saltflatssunrise.jpg" style="width:100%" onclick="onClick(this)" alt="Golden Reflections">
-      <img src="mountaintrees.jpg" style="width:100%" onclick="onClick(this)" alt="A green valley">
-      <img src="FullSizeRender.jpg" style="width:100%" onclick="onClick(this)">
-      <img src="DSC_0297.jpg" style="width:100%" onclick="onClick(this)">
-      <img src="IMG-3117.jpg" style="width:100%" onclick="onClick(this)">
+    <div class="w3-col" style="width:20%">
+      <img src="fence.jpg" style="width:100%" onclick="onClick(this)" alt="Santa Rosa, Channel Islands National Park, 2022; Nikon D3000">
+      <img src="endoftheroad.jpg" style="width:100%" onclick="onClick(this)" alt="Nikon D3000">
+      <img src="mountainglow.jpg" style="width:100%" onclick="onClick(this)" alt="Lassen National Park, 2022; Sony a6000">
       <img src="IMG_1651.jpg" style="width:100%" onclick="onClick(this)">
+      <img src="IMG_1364.jpg" style="width:100%" onclick="onClick(this)" alt="Nikon D3000">
+      <img src="DSC_0183.jpg" style="width:100%" onclick="onClick(this)" alt="Nikon D3000">
     </div>
 
-
-    <!-- Photo grid Astrophotography-->
-    <div class="w3-container w3-padding-32" id="Astrophotography">
-      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Astrophotography</h3>
+    <div class="w3-col" style="width:20%">
+      <img src="DSC_0061.JPG" style="width:100%" onclick="onClick(this)">
+      <img src="IMG-3635.jpg" style="width:100%" onclick="onClick(this)">
+      <img src="02.11.23Still.bmp" style="width:100%" onclick="onClick(this)">
+      <img src="FullSizeRender.jpg" style="width:100%" onclick="onClick(this)" alt="Nikon D3000">
+      <img src="DSC_0207.jpg" style="width:100%" onclick="onClick(this)">
+      <img src="turtle1.jpg" style="width:100%" onclick="onClick(this)" alt="Nikon D3000">
+      <img src="85456165.jpg" style="width:100%" onclick="onClick(this)">
+      <img src="DSC06390.jpg" style="width:100%" onclick="onClick(this)">
     </div>
 
-      <div class="w3-third">
-        <img src="August12th2020.bmp" style="width:100%" onclick="onClick(this)">
-        <img src="DSC_0332.jpg" style="width:100%" onclick="onClick(this)">
-      </div>
-
-      <div class="w3-third">
-        <img src="IMG_1364.jpg" style="width:100%" onclick="onClick(this)">
-      </div>
-
-      <div class="w3-third">
-        <img src="DSC_0061.jpg" style="width:100%" onclick="onClick(this)">
-        <img src="02.11.23Still.bmp" style="width:100%" onclick="onClick(this)">
-      </div>
-      <div id="Astrophotography">
-        </div>
-
-    <!-- Photo grid Wildlife-->
-    <div class="w3-container w3-padding-32" id="Wildlife">
-      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Wildlife</h3>
+    <div class="w3-col" style="width:20%">
+      <img src="DSC_0297.jpg" style="width:100%" onclick="onClick(this)">
+      <img src="rustedcar.jpg" style="width:100%" onclick="onClick(this)" alt="Nikon D3000">
+      <img src="americanflag.jpg" style="width:100%" onclick="onClick(this)" alt="Nikon D3000">
+      <img src="IMG-3117.jpg" style="width:100%" onclick="onClick(this)">
+      <img src="DSC_4797.jpg" style="width:100%" onclick="onClick(this)">
+      <img src="DSC_0129.jpg" style="width:100%" onclick="onClick(this)">
+      <img src="chipmunk1.jpg" style="width:100%" onclick="onClick(this)" alt="Nikon D3000">
     </div>
-
-      <div class="w3-third">
-        <img src="DSC_0183.jpg" style="width:100%" onclick="onClick(this)">
-        <img src="chipmunk1.jpg" style="width:100%" onclick="onClick(this)">
-      </div>
-
-      <div class="w3-third">
-        <img src="turtle1.jpg" style="width:100%" onclick="onClick(this)">
-        <img src="DSC_0207.jpg" style="width:100%" onclick="onClick(this)">
-      </div>
-
-      <div class="w3-third">
-        <img src="deer1.jpg" style="width:100%" onclick="onClick(this)">
-      </div>
-          <div id="Wildlife">
-            </div>
-
-      <!-- Photo grid Other Works-->
-      <div class="w3-container w3-padding-32" id="Otherworks">
-        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Other Works</h3>
-      </div>
-
-        <div class="w3-third">
-          <img src="clockonfilm.jpg" style="width:100%" onclick="onClick(this)" alt="35mm, 400 iso">
-          <img src="americanflag.jpg" style="width:100%" onclick="onClick(this)" alt="Hanging in the wind">
-        </div>
-
-        <div class="w3-third">
-          <img src="rustedcar.jpg" style="width:100%" onclick="onClick(this)" alt="Left to the rust">
-          <img src="endoftheroad.jpg" style="width:100%" onclick="onClick(this)" alt="Left to nature">
-        </div>
-
-        <div class="w3-third">
-          <img src="lightsonfilm.jpg" style="width:100%" onclick="onClick(this)" alt="35mm, 400 iso">
-          <img src="takingoff.jpg" style="width:100%" onclick="onClick(this)">
-        </div>
-      </div>
-      <div id="Otherworks">
-        </div>
 </div>
 
   <!-- Modal for full size images on click-->
@@ -189,28 +116,7 @@ img {margin-bottom: -7px}
 </footer>
 
 <script>
-// Toggle grid padding
-function myFunction() {
-  var x = document.getElementById("myGrid");
-  if (x.className === "w3-row") {
-    x.className = "w3-row-padding";
-  } else {
-    x.className = x.className.replace("w3-row-padding", "w3-row");
-  }
-}
-
-// Script to open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
-
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
-
-// Modal Image Galleryfile:///C:/Users/josep/Documents/Github/Reworked%20Site/mountainglow.jpg
+// Modal Image
 function onClick(element) {
   document.getElementById("img01").src = element.src;
   document.getElementById("modal01").style.display = "block";
