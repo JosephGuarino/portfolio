@@ -1,136 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<title>Joseph Guarino, Amateur Photographer</title>
+<title>Joseph Guarino</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<!-- <link rel="stylesheet" href="assets/css/style.css"> -->
 <style>
-img {margin-bottom: 0px}
-body,h1,h2,h3,h4,h5 {
-  font-family: "Courier New", monospace;
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('assets/images/Lake.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
 }
-.w3-col img{margin-bottom: 0px; opacity: 0.8; cursor: pointer}
-.w3-col img:hover{opacity: 1}
 </style>
 </head>
 <body>
 
-<!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge">
-  <a class="w3-xxlarge w3-white w3-left w3-monospace" style="margin-top:6.5px"><font size="5px">Joseph Guarino</a>
-    <img class="w3-image w3-right w3-opacity" src="logo.jpg" style="margin:5px" width="75" height="75">
-</header>
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
 
-<!-- Push down content on small screens -->
-<div class="w3-hide-large" style="margin-top:-280px"></div>
+<!-- Logo -->
 
-<!-- Page content -->
-<!-- Header -->
-<header class="w3-panel w3-center w3-opacity" style="padding:50px 16px">
-      <img class="w3-image" src="logov2.jpg" width="500" height="500" style="padding:40px 8px">
-      <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">Joseph Guarino</h1>
-      <h3 class="w3-hide-medium w3-hide-small">Amateur Photography</h3>
-</header>
-
-  <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
-      <p id="caption"></p>
-    </div>
+    <img class="w3-image w3-right w3-opacity" src="assets/images/logo/logo.jpg" style="margin:5px" width="75" height="75">
   </div>
-
-  <!-- Photo grid-->
-  <div class="w3-row" id="myGrid" style="margin-bottom:128px">
-    <div class="w3-col" style="width:20%">
-      <img src="guage.jpg" style="width:100%" onclick="onClick(this)" alt="2023; Nikon z5">
-      <img src="alpinesunset.jpg" style="width:100%" onclick="onClick(this)" alt="Lassen National Park, 2022; Sony a6000">
-      <img src="snowroad.jpg" style="width:100%" onclick="onClick(this)" alt="2022; Sony a6000">
-      <img src="cavereflection.jpg" style="width:100%" onclick="onClick(this)" alt="Channel Islands, 2022; Nikon D3000">
-      <img src="takingoff.jpg" style="width:100%" onclick="onClick(this)" alt="2022; Nikon D3000">
-      <img src="bluemoon.jpg" style="width:100%" onclick="onClick(this)" alt="2023; Nikon z5">
-      <img src="mountainlake.jpg" style="width:100%" onclick="onClick(this)" alt="Cascade Range, 2022; Nikon D3000">
-      <img src="lightsonfilm.jpg" style="width:100%" onclick="onClick(this)" alt="2022; Minolta x700">
-      <img src="clockonfilm.jpg" style="width:100%" onclick="onClick(this)" alt="2022; Minolta x700">
-      <img src="deer1.jpg" style="width:100%" onclick="onClick(this)" alt="Mt. Wheeler, 2022; Nikon D3000">
-    </div>
-
-    <div class="w3-col" style="width:20%">
-      <img src="August12th2020.bmp" style="width:100%" onclick="onClick(this)" alt="2020; Nikon D3000">
-      <img src="DSC_0836.jpg" style="width:100%" onclick="onClick(this)" alt="2022; Sony a6000">
-      <img src="DSC_0250.JPG" style="width:100%" onclick="onClick(this)" alt="2022; Nikon D3000">
-      <img src="craterlake.jpg" style="width:100%" onclick="onClick(this)" alt="Crater Lake, 2022; Sony a6000">
-      <img src="narrows.jpg" style="width:100%" onclick="onClick(this)" alt="Antelope Canyon, 2022">
-      <img src="saltflatssunrise.jpg" style="width:100%" onclick="onClick(this)" alt="Bonneville Salt Flats, 2022; Nikon D3000">
-      <img src="mountaintrees.jpg" style="width:100%" onclick="onClick(this)" alt="Lassen National Park, 2022; Sony a6000">
-      <img src="IMG-3198.jpg" style="width:100%" onclick="onClick(this)" alt="Mt. Wheeler, 2022; Nikon D3000">
-      <img src="DSC_0311.jpg" style="width:100%" onclick="onClick(this)" alt="Nikon D3000">
-    </div>
-
-    <div class="w3-col" style="width:20%">
-      <img src="fence.jpg" style="width:100%" onclick="onClick(this)" alt="Santa Rosa, Channel Islands National Park, 2022; Nikon D3000">
-      <img src="endoftheroad.jpg" style="width:100%" onclick="onClick(this)" alt="Nikon D3000">
-      <img src="mountainglow.jpg" style="width:100%" onclick="onClick(this)" alt="Lassen National Park, 2022; Sony a6000">
-      <img src="IMG_1651.jpg" style="width:100%" onclick="onClick(this)" alt="2023; Nikon z5">
-      <img src="DSC_0827.jpg" style="width:100%" onclick="onClick(this)" alt="2022; Sony a6000">
-      <img src="quatermoon.jpg" style="width:100%" onclick="onClick(this)" alt="2023; Nikon z5">
-      <img src="IMG_1364.jpg" style="width:100%" onclick="onClick(this)" alt="Nikon D3000">
-      <img src="DSC_0183.jpg" style="width:100%" onclick="onClick(this)" alt="Nikon D3000">
-    </div>
-
-    <div class="w3-col" style="width:20%">
-      <img src="DSC06548.JPG" style="width:100%" onclick="onClick(this)" alt="2022; Sony a6000">
-      <img src="snowlakeCL.jpg" style="width:100%" onclick="onClick(this)" alt="2022; Sony a6000">
-      <img src="DSC_0061.JPG" style="width:100%" onclick="onClick(this)">
-      <img src="IMG-3635.jpg" style="width:100%" onclick="onClick(this)">
-      <img src="DSC06617.JPG" style="width:100%" onclick="onClick(this)" alt="2022; Sony a6000">
-      <img src="02.11.23Still.bmp" style="width:100%" onclick="onClick(this)">
-      <img src="FullSizeRender.jpg" style="width:100%" onclick="onClick(this)" alt="Nikon D3000">
-      <img src="DSC_0207.jpg" style="width:100%" onclick="onClick(this)">
-      <img src="turtle1.jpg" style="width:100%" onclick="onClick(this)" alt="Nikon D3000">
-      <img src="85456165.jpg" style="width:100%" onclick="onClick(this)">
-      <img src="DSC06390.JPG" style="width:100%" onclick="onClick(this)">
-    </div>
-
-    <div class="w3-col" style="width:20%">
-      <img src="DSC06533.JPG" style="width:100%" onclick="onClick(this)" alt="2022; Sony a6000">
-      <img src="DSC_0297.jpg" style="width:100%" onclick="onClick(this)">
-      <img src="rustedcar.jpg" style="width:100%" onclick="onClick(this)" alt="Nikon D3000">
-      <img src="DSC06335.JPG" style="width:100%" onclick="onClick(this)" alt="2022; Sony a6000">
-      <img src="americanflag.jpg" style="width:100%" onclick="onClick(this)" alt="Nikon D3000">
-      <img src="IMG-3117.jpg" style="width:100%" onclick="onClick(this)" alt="Nevada, 2022; Nikon D3000">
-      <img src="DSC_4797.jpg" style="width:100%" onclick="onClick(this)">
-      <img src="DSC_0129.jpg" style="width:100%" onclick="onClick(this)" alt="Nevada, 2022; Nikon D3000">
-      <img src="chipmunk1.jpg" style="width:100%" onclick="onClick(this)" alt="Nikon D3000">
-    </div>
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-center">Joseph Guarino</h1>
+    <h1 class="w3-jumbo w3-center">Amateur Photography</h1>
+    <hr class="w3-border-white" style="margin:auto;width:40%">
+    <p class="w3-xlarge w3-center">Coming Soon</p>
+  </div>
+  <div class="w3-display-bottomleft w3-padding-large">
+    Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+  </div>
 </div>
 
-  <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
-      <p id="caption"></p>
-    </div>
-  </div>
-
-<!-- End page content -->
-</div>
-
-<!-- Footer -->
-  <p class="w3-medium w3-center">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
-
-<script>
-// Modal Image
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-</script>
 </body>
 </html>
