@@ -46,12 +46,14 @@ body, html {
   <!-- Navbar (sit on top) -->
   <div class="w3-top">
     <div class="w3-bar" id="myNavbar">
-      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      </a>
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars w3-text-black"></i>
+    </a>
       <a href="index.html" class="w3-bar-item w3-button w3-text-black">HOME</a>
       <!--<a href="index.html/#about" class="w3-bar-item w3-button w3-hide-small w3-text-black"><i class="fa fa-user"></i> ABOUT</a>-->
       <a href="portfolio.html" class="w3-bar-item w3-button w3-hide-small w3-text-black"><i class="fa fa-th"></i> PORTFOLIO</a>
-      <a href="https://instagram.com/joegurino" class="w3-bar-item w3-button w3-hide-small w3-text-black"><i class="fa fa-instagram"></i></a>
+      <a href="https://instagram.com/joegurino" class="w3-bar-item w3-button w3-hide-small w3-text-black"><i class="fa fa-instagram"></i> INSTAGRAM</a>
+      <a href="https://www.flickr.com/photos/201889971@N03/" class="w3-bar-item w3-button w3-hide-small w3-text-black"> FLICKR</a>
       <a class="w3-bar-item w3-hide-small w3-right">
         <img class="w3-image w3-right w3-opacity" src="assets/logosmall.png" style="margin:5px" width="35" height="35">
       </a>
@@ -60,24 +62,32 @@ body, html {
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
       <!--<a href="index.html" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>-->
-      <a href="portfolio.html" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-      <a href="https://instagram.com/joegurino" class="w3-bar-item w3-button fa fa-instagram" onclick="toggleFunction()"></a>
+      <a href="portfolio.html" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-th"></i> PORTFOLIO</a>
+      <a href="https://instagram.com/joegurino" class="w3-bar-item w3-button fa fa-instagram" onclick="toggleFunction()"> INSTAGRAM</a>
+      <a href="https://www.flickr.com/photos/201889971@N03/" class="w3-bar-item w3-button" onclick="toggleFunction()"> FLICKR</a>
     </div>
   </div>
 
+<!--
+  <div class="w3-bar">
+      <a class="w3-button w3-hide-medium w3-hide-large w3-text-white w3-red">
+        <br><i>This site is not yet entirely formatted for mobile devices. A number of pages will work but not all. Best viewed in 1920x1080</i>
+      </a>
+    </div>
+-->
 
   <!-- First Parallax Image with Logo Text -->
   <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
     <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center custom-bg">
-      <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">OUTDOORS & TRAVEL</h1>
+      <h1 class="w3-xxxlarge">OUTDOORS</h1>
     </div>
       <!-- Buttons directly below -->
       <div class="w3-display-middle w3-padding-large w3-wide w3-text-light-grey w3-center custom-bg" style="margin-top: 120px;">
-      <a href="index.html" style="display: inline-block; margin: 10px;">
-        <button class="w3-button w3-padding-large w3-section w3-border w3-border-white" style="font-size: 18px; color: white;">Home</button>
+      <a href="index.html" style="display: inline-block; margin: 0px;">
+        <button class="w3-button w3-padding-large w3-section w3-border w3-border-white w3-hide-small" style="font-size: 18px; color: white;">Home</button>
       </a>
-      <a href="portfolio.html" style="display: inline-block; margin: 10px;">
-        <button class="w3-button w3-padding-large w3-section w3-border w3-border-white" style="font-size: 18px; color: white;">Portfolio</button>
+      <a href="portfolio.html" style="display: inline-block; margin: 0px;">
+        <button class="w3-button w3-padding-large w3-section w3-border w3-border-white w3-hide-small" style="font-size: 18px; color: white;">Portfolio</button>
       </a>
     </div>
   </div>
