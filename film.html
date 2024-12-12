@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Photography Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url("images/film/000669960022.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+</style>
+</head>
+<body>
+
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars w3-text-black"></i>
+    </a>
+      <a href="index.html" class="w3-bar-item w3-button w3-text-black">HOME</a>
+      <!--<a href="index.html/#about" class="w3-bar-item w3-button w3-hide-small w3-text-black"><i class="fa fa-user"></i> ABOUT</a>-->
+      <a href="portfolio.html" class="w3-bar-item w3-button w3-hide-small w3-text-black"><i class="fa fa-th"></i> PORTFOLIO</a>
+      <a href="https://instagram.com/joegurino" class="w3-bar-item w3-button w3-hide-small w3-text-black"><i class="fa fa-instagram"></i> INSTAGRAM</a>
+      <a href="https://www.flickr.com/photos/201889971@N03/" class="w3-bar-item w3-button w3-hide-small w3-text-black"> FLICKR</a>
+      <a class="w3-bar-item w3-hide-small w3-right">
+        <img class="w3-image w3-right w3-opacity" src="assets/logosmall.png" style="margin:5px" width="35" height="35">
+      </a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+      <!--<a href="index.html" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>-->
+      <a href="portfolio.html" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-th"></i> PORTFOLIO</a>
+      <a href="https://instagram.com/joegurino" class="w3-bar-item w3-button fa fa-instagram" onclick="toggleFunction()"> INSTAGRAM</a>
+      <a href="https://www.flickr.com/photos/201889971@N03/" class="w3-bar-item w3-button" onclick="toggleFunction()"> FLICKR</a>
+    </div>
+  </div>
+
+<!--
+  <div class="w3-bar">
+      <a class="w3-button w3-hide-medium w3-hide-large w3-text-white w3-red">
+        <br><i>This site is not yet entirely formatted for mobile devices. A number of pages will work but not all. Best viewed in 1920x1080</i>
+      </a>
+    </div>
+-->
+
+  <!-- First Parallax Image with Logo Text -->
+  <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+    <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center custom-bg">
+      <h1 class="w3-xxxlarge">FILM</h1>
+    </div>
+      <!-- Buttons directly below -->
+      <div class="w3-display-middle w3-padding-large w3-wide w3-text-light-grey w3-center custom-bg" style="margin-top: 120px;">
+      <a href="index.html" style="display: inline-block; margin: 0px;">
+        <button class="w3-button w3-padding-large w3-section w3-border w3-border-white w3-hide-small" style="font-size: 18px; color: white;">Home</button>
+      </a>
+      <a href="portfolio.html" style="display: inline-block; margin: 0px;">
+        <button class="w3-button w3-padding-large w3-section w3-border w3-border-white w3-hide-small" style="font-size: 18px; color: white;">Portfolio</button>
+      </a>
+    </div>
+  </div>
+
+
+    <!-- Container -->
+    <!-- Photo Grid -->
+<div class="w3-row w3-margin w3-row-padding" id="myGrid">
+<div class="w3-col" style="width:25%">
+  <img src="images/film/000669960003.jpg" style="width:100%" onclick="onClick(this)" alt="Minolta x700">
+  <img src="images/film/000520300011.jpg" style="width:100%" onclick="onClick(this)" alt="Minolta x700">
+  <img src="images/film/000669960006.jpg" style="width:100%" onclick="onClick(this)" alt="Oshkosh; Minolta x700">
+  <img src="images/film/000669960028.jpg" style="width:100%" onclick="onClick(this)" alt="Oshkosh; Minolta x700">
+</div>
+
+<div class="w3-col" style="width:25%">
+  <img src="images/film/000669960007.jpg" style="width:100%" onclick="onClick(this)" alt="Oshkosh; Minolta x700">
+  <img src="images/film/000669960011.jpg" style="width:100%" onclick="onClick(this)" alt="Oshkosh; Minolta x700">
+  <img src="images/film/000669960004.jpg" style="width:100%" onclick="onClick(this)" alt="Minolta x700">
+</div>
+
+<div class="w3-col" style="width:25%">
+  <img src="images/film/000669960020.jpg" style="width:100%" onclick="onClick(this)" alt="Oshkosh; Minolta x700">
+  <img src="images/film/000669960019.jpg" style="width:100%" onclick="onClick(this)" alt="Oshkosh; Minolta x700">
+  <img src="images/film/000669960021.jpg" style="width:100%" onclick="onClick(this)" alt="Oshkosh; Minolta x700">
+</div>
+
+<div class="w3-col" style="width:25%">
+  <img src="images/film/000669960022.jpg" style="width:100%" onclick="onClick(this)" alt="Oshkosh; Minolta x700">
+  <img src="images/film/000669960023.jpg" style="width:100%" onclick="onClick(this)" alt="Oshkosh; Minolta x700">
+  <img src="images/film/000669960024.jpg" style="width:100%" onclick="onClick(this)" alt="Oshkosh; Minolta x700">
+</div>
+</div>
+
+
+      <!-- Footer -->
+      <footer class="w3-center w3-black w3-padding-16">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+      </footer>
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+          <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+          <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img id="img01" class="w3-image">
+            <p id="caption"></p>
+          </div>
+        </div>
+
+
+  <script>
+  // Modal Image Gallery
+  function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
+  }
+
+  // Change style of navbar on scroll
+  window.onscroll = function() {myFunction()};
+  function myFunction() {
+      var navbar = document.getElementById("myNavbar");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+      } else {
+          navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+      }
+  }
+
+  // Used to toggle the menu on small screens when clicking on the menu button
+  function toggleFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+      } else {
+          x.className = x.className.replace(" w3-show", "");
+      }
+  }
+  </script>
+
+  </body>
+  </html>
