@@ -31,7 +31,7 @@ body, html {
 
 /* Second image (Portfolio) */
 .bgimg-2 {
-  background-image: url("images/parallax/DSC_2758.jpg");
+  background-image: url("images/parallax/DSC_2840.jpg");
   min-height: 75%;
 }
 
@@ -64,12 +64,14 @@ body, html {
   <!-- Navbar (sit on top) -->
   <div class="w3-top">
     <div class="w3-bar" id="myNavbar">
-      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      </a>
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars w3-text-black"></i>
+    </a>
       <a href="index.html" class="w3-bar-item w3-button w3-text-black">HOME</a>
       <!--<a href="index.html/#about" class="w3-bar-item w3-button w3-hide-small w3-text-black"><i class="fa fa-user"></i> ABOUT</a>-->
       <a href="portfolio.html" class="w3-bar-item w3-button w3-hide-small w3-text-black"><i class="fa fa-th"></i> PORTFOLIO</a>
-      <a href="https://instagram.com/joegurino" class="w3-bar-item w3-button w3-hide-small w3-text-black"><i class="fa fa-instagram"></i></a>
+      <a href="https://instagram.com/joegurino" class="w3-bar-item w3-button w3-hide-small w3-text-black"><i class="fa fa-instagram"></i> INSTAGRAM</a>
+      <a href="https://www.flickr.com/photos/201889971@N03/" class="w3-bar-item w3-button w3-hide-small w3-text-black"> FLICKR</a>
       <a class="w3-bar-item w3-hide-small w3-right">
         <img class="w3-image w3-right w3-opacity" src="assets/logosmall.png" style="margin:5px" width="35" height="35">
       </a>
@@ -78,10 +80,19 @@ body, html {
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
       <!--<a href="index.html" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>-->
-      <a href="portfolio.html" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-      <a href="https://instagram.com/joegurino" class="w3-bar-item w3-button fa fa-instagram" onclick="toggleFunction()"></a>
+      <a href="portfolio.html" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-th"></i> PORTFOLIO</a>
+      <a href="https://instagram.com/joegurino" class="w3-bar-item w3-button fa fa-instagram" onclick="toggleFunction()"> INSTAGRAM</a>
+      <a href="https://www.flickr.com/photos/201889971@N03/" class="w3-bar-item w3-button" onclick="toggleFunction()"> FLICKR</a>
     </div>
   </div>
+
+<!--
+  <div class="w3-bar">
+      <a class="w3-button w3-hide-medium w3-hide-large w3-text-white w3-red">
+        <br><i>This site is not yet entirely formatted for mobile devices. A number of pages will work but not all. Best viewed in 1920x1080</i>
+      </a>
+    </div>
+-->
 
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
@@ -93,15 +104,14 @@ body, html {
   </div>
 </div>
 
-<!-- Container (About Section) -->
-<div class="bgimg-4 w3-container" id="about">
+<!-- Container Large (About Section) -->
+<div class="bgimg-4 w3-container w3-hide-small w3-hide-medium" id="about">
   <div class="w3-content w3-container" id="about">
     <div class="w3-col m6 w3-center w3-padding-large">
       <img src="images/parallax/DSC_3182.JPG" class="w3-round w3-image" alt="Self Portrait, (Eventually)">
     </div>
 
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large w3-text-white" style="margin-top: 200px; font-family: Georgia, serif;">
+    <div class="w3-col m6 w3-padding-large w3-text-white" style="margin-top: 180px; font-family: Georgia, serif;">
       <h3 class="w3-center">Joseph Guarino</h3>
       <p>American photographer based from within the cornfield covered midwest.</p>
       <p>When it comes to photography it can be difficult to limit oneself to only a specific aspect of photography. That being said,
@@ -111,6 +121,42 @@ body, html {
     </div>
   </div>
 </div>
+
+<!-- Container Small (About Section) -->
+<div class="bgimg-4 w3-container w3-hide-large w3-hide-medium" id="about">
+  <div class="w3-content w3-container" id="about">
+    <div class="w3-col m6 w3-center w3-padding-large">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large w3-text-white" style="font-family: Georgia, serif;">
+      <h3 class="w3-center">Joseph Guarino</h3>
+      <p>American photographer based from within the cornfield covered midwest.</p>
+      <p>When it comes to photography it can be difficult to limit oneself to only a specific aspect of photography. That being said,
+      my main focus in aviation. Very little can beat pure electricty that comes from the roar of afterburning engines, the smell of jet
+    fuel, and the energy of the crowds. I don't, however, only limit myself to things that take to the skies. My exploration of photography
+  started with landscapes and the outdoors.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container Medium (About Section) -->
+<div class="bgimg-4 w3-container w3-hide-small w3-hide-large" id="about">
+  <div class="w3-content w3-container" id="about">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <img src="images/parallax/DSC_3182.JPG" class="w3-round w3-image" alt="Self Portrait, (Eventually)">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large w3-text-white" style="font-family: Georgia, serif;">
+      <h3 class="w3-center">Joseph Guarino</h3>
+      <p>American photographer based from within the cornfield covered midwest.</p>
+      <p>When it comes to photography it can be difficult to limit oneself to only a specific aspect of photography. That being said,
+      my main focus in aviation. Very little can beat pure electricty that comes from the roar of afterburning engines, the smell of jet
+    fuel, and the energy of the crowds. I don't, however, only limit myself to things that take to the skies. My exploration of photography
+  started with landscapes and the outdoors.</p>
+    </div>
+  </div>
+</div>
+
 
 <!-- Second Parallax Image with Portfolio Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min">
@@ -122,6 +168,7 @@ body, html {
 </div>
 
 <!-- Container (Portfolio Section) -->
+<div class="w3-hide-small">
   <img src="images/parallax/quote2.jpg" style="width:100%; height:auto;">
 </div>
 
@@ -185,7 +232,7 @@ body, html {
 
 
 <div class="w3-row w3-center w3-white w3-padding-16">
-  <a href="felines.html">
+  <a href="portfolio.html">
   <button class="w3-button w3-padding-large w3-light-grey" style="margin-top: 10px;">View Portfolio</button></a>
 </div>
 
