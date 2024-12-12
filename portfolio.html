@@ -24,12 +24,14 @@ body, html {
   <!-- Navbar (sit on top) -->
   <div class="w3-top">
     <div class="w3-bar" id="myNavbar">
-      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      </a>
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars w3-text-black"></i>
+    </a>
       <a href="index.html" class="w3-bar-item w3-button w3-text-black">HOME</a>
       <!--<a href="index.html/#about" class="w3-bar-item w3-button w3-hide-small w3-text-black"><i class="fa fa-user"></i> ABOUT</a>-->
       <a href="portfolio.html" class="w3-bar-item w3-button w3-hide-small w3-text-black"><i class="fa fa-th"></i> PORTFOLIO</a>
-      <a href="https://instagram.com/joegurino" class="w3-bar-item w3-button w3-hide-small w3-text-black"><i class="fa fa-instagram"></i></a>
+      <a href="https://instagram.com/joegurino" class="w3-bar-item w3-button w3-hide-small w3-text-black"><i class="fa fa-instagram"></i> INSTAGRAM</a>
+      <a href="https://www.flickr.com/photos/201889971@N03/" class="w3-bar-item w3-button w3-hide-small w3-text-black"> FLICKR</a>
       <a class="w3-bar-item w3-hide-small w3-right">
         <img class="w3-image w3-right w3-opacity" src="assets/logosmall.png" style="margin:5px" width="35" height="35">
       </a>
@@ -38,15 +40,24 @@ body, html {
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
       <!--<a href="index.html" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>-->
-      <a href="portfolio.html" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-      <a href="https://instagram.com/joegurino" class="w3-bar-item w3-button fa fa-instagram" onclick="toggleFunction()"></a>
+      <a href="portfolio.html" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-th"></i> PORTFOLIO</a>
+      <a href="https://instagram.com/joegurino" class="w3-bar-item w3-button fa fa-instagram" onclick="toggleFunction()"> INSTAGRAM</a>
+      <a href="https://www.flickr.com/photos/201889971@N03/" class="w3-bar-item w3-button" onclick="toggleFunction()"> FLICKR</a>
     </div>
   </div>
+
+<!--
+  <div class="w3-bar">
+      <a class="w3-button w3-hide-medium w3-hide-large w3-text-white w3-red">
+        <br><i>This site is not yet entirely formatted for mobile devices. A number of pages will work but not all. Best viewed in 1920x1080</i>
+      </a>
+    </div>
+  -->
 
 <!-- Aviation -->
 <div class="w3-display-container w3-opacity-min" id="aviation" style="position: relative; text-align: center; font-family: Georgia, serif;">
   <img src="images/parallax/DSC_8915.jpg" style="width:100%; height:auto;">
-  <div style="position: absolute; top: 50%; left: 10%; transform: translateY(-50%);">
+  <div style="position: absolute; top: 50%; left: 10%; transform: translateY(-50%);" class="w3-hide-small w3-hide-medium">
     <b><p style="margin: 0; color: white; font-size: 24px;">AVIATION</p>
     <a href="aviation.html">
       <button class="w3-button w3-padding-large w3-section w3-border w3-border-white" style="font-size: 24px; color: white;">
@@ -54,36 +65,96 @@ body, html {
       </button></b>
     </a>
   </div>
+  <div style="position: absolute; top: 50%; left: 10%; transform: translateY(-50%);" class="w3-hide-large">
+    <a href="aviation.html">
+      <button class="w3-button w3-padding-large w3-section w3-border w3-border-white" style="font-size: 24px; color: white;">
+        AVIATION
+      </button>
+    </a>
+  </div>
 </div>
 
 
 <!-- Outdoors & Travel -->
-<div class="w3-display-container w3-opacity-min" id="aviation" style="position: relative; text-align: center; font-family: Georgia, serif;">
+<div class="w3-display-container w3-opacity-min" id="outdoors" style="position: relative; text-align: center; font-family: Georgia, serif;">
   <img src="images/parallax/DSC_2853.jpg" style="width:100%; height:auto;">
-  <div style="position: absolute; top: 50%; right: 10%; transform: translateY(-50%);">
-    <b><p style="margin: 0; color: white; font-size: 24px;">OUTDOORS & TRAVEL</p>
+  <div style="position: absolute; top: 50%; right: 10%; transform: translateY(-50%);" class="w3-hide-small w3-hide-medium">
+    <b><p style="margin: 0; color: white; font-size: 24px;">OUTDOORS</p>
     <a href="outdoors.html">
     <button class="w3-button w3-padding-large w3-section w3-border w3-border-white" style="font-size: 24px; color: white;">
       View Gallery
     </button></b>
   </a>
   </div>
-</div>
-
-
-<!-- Felines -->
-<div class="w3-display-container w3-opacity-min" id="aviation" style="position: relative; text-align: center; font-family: Georgia, serif;">
-  <img src="images/parallax/DSC_3254.jpg" style="width:100%; height:auto;">
-  <div style="position: absolute; top: 50%; left: 10%; transform: translateY(-50%);">
-    <b><p style="margin: 0; color: white; font-size: 24px;">Felines</p>
-    <a href="felines.html">
+  <div style="position: absolute; top: 50%; right: 10%; transform: translateY(-50%);" class="w3-hide-large">
+    <a href="outdoors.html">
       <button class="w3-button w3-padding-large w3-section w3-border w3-border-white" style="font-size: 24px; color: white;">
-        View Gallery
-      </button></b>
+        OUTDOORS
+      </button>
     </a>
   </div>
 </div>
 
+
+<!-- Mushing  -->
+<div class="w3-display-container w3-opacity-min" id="outdoors" style="position: relative; text-align: center; font-family: Georgia, serif;">
+  <img src="images/parallax/65465416451.png" style="width:100%; height:auto;">
+  <div style="position: absolute; top: 50%; left: 10%; transform: translateY(-50%);" class="w3-hide-small w3-hide-medium">
+    <b><p style="margin: 0; color: white; font-size: 24px;">MUSHING</p>
+    <a href="mushing.html">
+    <button class="w3-button w3-padding-large w3-section w3-border w3-border-white" style="font-size: 24px; color: white;">
+      View Gallery
+    </button></b>
+  </a>
+  </div>
+  <div style="position: absolute; top: 50%; left: 10%; transform: translateY(-50%);" class="w3-hide-large">
+    <a href="mushing.html">
+      <button class="w3-button w3-padding-large w3-section w3-border w3-border-white" style="font-size: 24px; color: white;">
+        MUSHING
+      </button>
+    </a>
+  </div>
+</div>
+
+<!-- Felines -->
+<div class="w3-display-container w3-opacity-min" id="outdoors" style="position: relative; text-align: center; font-family: Georgia, serif;">
+  <img src="images/parallax/DSC_3254.jpg" style="width:100%; height:auto;">
+  <div style="position: absolute; top: 50%; right: 10%; transform: translateY(-50%);" class="w3-hide-small w3-hide-medium">
+    <b><p style="margin: 0; color: white; font-size: 24px;">FELINES</p>
+    <a href="felines.html">
+    <button class="w3-button w3-padding-large w3-section w3-border w3-border-white" style="font-size: 24px; color: white;">
+      View Gallery
+    </button></b>
+  </a>
+  </div>
+  <div style="position: absolute; top: 50%; right: 10%; transform: translateY(-50%);" class="w3-hide-large">
+    <a href="felines.html">
+      <button class="w3-button w3-padding-large w3-section w3-border w3-border-white" style="font-size: 24px; color: white;">
+        FELINES
+      </button>
+    </a>
+  </div>
+</div>
+
+<!-- Film -->
+<div class="w3-display-container w3-opacity-min" id="outdoors" style="position: relative; text-align: center; font-family: Georgia, serif;">
+  <img src="images/parallax/685463163.png" style="width:100%; height:auto;">
+  <div style="position: absolute; top: 50%; left: 10%; transform: translateY(-50%);" class="w3-hide-small w3-hide-medium">
+    <b><p style="margin: 0; color: white; font-size: 24px;">FILM</p>
+    <a href="film.html">
+    <button class="w3-button w3-padding-large w3-section w3-border w3-border-white" style="font-size: 24px; color: white;">
+      View Gallery
+    </button></b>
+  </a>
+  </div>
+  <div style="position: absolute; top: 50%; left: 10%; transform: translateY(-50%);" class="w3-hide-large">
+    <a href="film.html">
+      <button class="w3-button w3-padding-large w3-section w3-border w3-border-white" style="font-size: 24px; color: white;">
+        FILM
+      </button>
+    </a>
+  </div>
+</div>
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-16">
