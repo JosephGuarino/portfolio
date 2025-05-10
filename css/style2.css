@@ -1,0 +1,245 @@
+/* This is a free layout for anyone to use!
+All I ask is that you keep this credit in-tact, or that you put my website link
+(https://nonkiru.art) somewhere on your site.
+
+Otherwise, edit this as much as you'd like!
+
+Last Updated: 4th August 2023 */
+
+/* These are the default colour codes for the layout.
+Changing the colour code here will update it for any element that uses it. */
+
+:root {
+    /* Default: Pink */
+    --primary: #c0b8bf;
+
+    /* Default: Light Pink */
+    --primary_light: #7f797f;
+
+    /* Default: Dark Pink */
+    --primary_dark: #9cc48b;
+
+    /* Default: White */
+    --secondary: #e5dfe5;
+
+    /* Default: Brown */
+    --tertiary: #000000;
+
+    /* Default: Blue */
+    --link: #000000;
+}
+
+
+body {
+    background: #00787f; /* bg color */
+    background-size: cover;
+    color: var(--tertiary);
+    word-break: inherit;
+}
+
+/* Link Styling */
+a {
+    color: var(--link);
+    /* Adds a smooth effect to link hover. */
+    transition: 0.1s all ease-in-out;
+}
+
+a:hover {
+    color: var(--primary_dark);
+}
+
+/* Header Styling */
+h1 {
+    display: block;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h2 {
+    display: block;
+    font-size: 17px;
+    margin-top: 3px;
+    margin-bottom: 7px;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h3 {
+    display: block;
+    font-size: 16px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: 900;
+}
+
+
+.container {
+    background: var(--secondary);
+    border: 1px solid var(--tertiary); /* black inner boarder */
+    border-radius: 2px;
+    width: max-content;
+    max-width: 1000px;
+    overflow:auto;
+    box-shadow: 3px 4px 0px var(--primary);
+    margin: 5px;
+    cursor: move;
+
+}
+
+.containercommunity {
+    background: var(--secondary);
+    border: 1px solid var(--tertiary);
+    border-radius: 2px;
+    width: 700px;
+    overflow-y: auto;
+    box-shadow: 3px 4px 0px var(--primary);
+    margin: 5px;
+    cursor: move; }
+
+.box {
+    border: 1px solid var(--primary);
+    padding: 10px;
+    overflow:auto;
+    max-height: 800px;
+    scrollbar-color: #c0b8bf #fff8ff;
+}
+
+
+
+.minibox {
+    border: 2px dotted #898189;
+    background-color: #fff8ff;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: fit-content;
+    max-height: 450px;
+    overflow:auto;
+    scrollbar-color: #c0b8bf #fff8ff;
+    scrollbar-width: thin;
+}
+
+/* Styling the scrollbar in Chrome and Safari */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c3dbb8; /* Set thumb color for Chrome and Safari */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f9faf2; /* Set track color for Chrome and Safari */
+}
+
+.box_header {
+    border: 1px solid var(--primary);
+    background-color: var(--primary_light);
+    height: 20px;
+    padding: 5px;
+    /* This centers the text vertically. */
+    line-height: 20px;
+}
+
+/* Changes the brightness of the fake buttons on hover. Also changes the cursor. */
+.box_header img:hover {
+    filter: brightness(103%);
+    cursor: pointer;
+}
+
+/* Darkens and saturates the buttons on click. Also changes the cursor. */
+.box_header img:active {
+    filter: brightness(97%) saturate(125%);
+    cursor: pointer;
+}
+
+#para {
+  display: block;
+}
+.collapsed {
+  display: none;
+}
+
+   ::selection {
+    background-color: peachpuff;
+   }
+
+   .animation--off {
+    animation: none !important;
+   }
+
+   a .ff-container.ff-active .ff-image,
+   a .ff-container.ff-inactive .ff-canvas.ff-canvas-ready {
+    transition: none !important;
+    -o-transition: none !important;
+    -moz-transition: none !important;
+    -webkit-transition: none !important;
+   }
+   .ff-container.ff-responsive {
+    width: 88px !important;
+    height: 31px;
+  }
+  .ff-container.ff-responsive .ff-image,.ff-container.ff-responsive .ff-canvas {
+    width: 88px !important;
+    height: 31px;
+  }
+   a:hover img,
+   a:hover .ff-container.ff-active .ff-image,
+   a:hover .ff-container.ff-inactive .ff-canvas.ff-canvas-ready {
+    opacity: 90% !important;
+   }
+
+   a:hover .ff-container.ff-inactive .ff-image {
+    opacity: 0 !important;
+   }
+
+ .pagedoll {
+        position: fixed;
+    top: 2rem;
+    right: 2rem;
+    cursor: move;}
+
+
+/* Mobile Support */
+@media only screen and (max-width: 890px) {
+    .container {
+        position: static;
+        width: 100%;
+        margin: unset;
+        margin-bottom: 5px;
+        margin-left: 15px;
+        margin-right: 15px;}
+
+        .containercommunity {
+        position: static;
+        width: 100%;
+        margin: unset;
+        margin-bottom: 5px;
+        margin-left: 15px;
+        margin-right: 15px;
+        }
+
+ .pagedoll { display: none; }
+
+ /*
+.wrapper {
+  width: 90%;
+  } /*
+
+    .pagedoll {
+        display: none;
+        width: 0px;
+        height:0px;
+}
+.pfp {
+  display:none;
+}
+
+}
