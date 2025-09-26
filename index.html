@@ -56,8 +56,8 @@ body, html {
     </a>
       <a href="index.html" class="w3-bar-item w3-button w3-text-black">HOME</a>
       <a href="portfolio.html" class="w3-bar-item w3-button w3-hide-small w3-text-black"><i class="fa fa-th"></i> PORTFOLIO</a>
-      <a href="https://instagram.com/joegurino" class="w3-bar-item w3-button w3-hide-small w3-text-black"><i class="fa fa-instagram"></i> INSTAGRAM</a>
       <a href="https://www.flickr.com/photos/201889971@N03/" class="w3-bar-item w3-button w3-hide-small w3-text-black"> FLICKR</a>
+      <a href="https://instagram.com/joegurino" class="w3-bar-item w3-button w3-hide-small w3-text-black"><i class="fa fa-instagram"></i> INSTAGRAM</a>
       <a class="w3-bar-item w3-hide-small w3-right">
         <img class="w3-image w3-right w3-opacity" src="assets/logosmall.png" style="margin:5px" width="35" height="35">
       </a>
@@ -66,8 +66,8 @@ body, html {
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
       <a href="portfolio.html" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-th"></i> PORTFOLIO</a>
-      <a href="https://instagram.com/joegurino" class="w3-bar-item w3-button fa fa-instagram" onclick="toggleFunction()"> INSTAGRAM</a>
       <a href="https://www.flickr.com/photos/201889971@N03/" class="w3-bar-item w3-button" onclick="toggleFunction()"> FLICKR</a>
+      <a href="https://instagram.com/joegurino" class="w3-bar-item w3-button fa fa-instagram" onclick="toggleFunction()"> INSTAGRAM</a>
     </div>
   </div>
 
@@ -124,34 +124,71 @@ body, html {
   <button class="w3-button w3-padding-large w3-light-grey" style="margin-top: 10px;">View Portfolio</button></a>
 </div>
 
-
-<!-- Container (Contact Section) -->
-<!-- Photo Grid -->
-<div class="w3-row w3-margin w3-row-padding" id="myGrid">
+<!-- Container -->
+<!-- Photo Grid Large-->
+<div class="w3-row w3-padding w3-row-padding w3-hide-small w3-hide-medium" id="myGrid">
 <div class="w3-col" style="width:25%">
+<img src="images/misc/54727613098_47653e83bd_b.jpg" style="width:100%" onclick="onClick(this)">
+<img src="images/nature/DSC_2855.jpg" style="width:100%" onclick="onClick(this)">
+<img src="images/nature/DSC_0822.jpg" style="width:100%" onclick="onClick(this)">
+</div>
+
+<div class="w3-col" style="width:25%">
+<img src="images/misc/DSC_7407.jpg" style="width:100%" onclick="onClick(this)">
+<img src="images/aviation/DSC_3692.jpg" style="width:100%" onclick="onClick(this)">
+<img src="images/animals/DSC_6054.jpg" style="width:100%" onclick="onClick(this)">
+</div>
+
+<div class="w3-col" style="width:25%">
+<img src="images/aviation/DSC_7073-r.jpg" style="width:100%" onclick="onClick(this)">
+<img src="images/aviation/DSC_7480.jpg" style="width:100%" onclick="onClick(this)">
+<img src="images/animals/DSC_1785.jpg" style="width:100%" onclick="onClick(this)">
+</div>
+
+<div class="w3-col" style="width:25%">
+<img src="images/nature/DSC_0896.jpg" style="width:100%" onclick="onClick(this)">
+<img src="images/nature/DSC_3934.png" style="width:100%" onclick="onClick(this)">
+<img src="images/aviation/54727628689_dd7b298c5a_b.jpg" style="width:100%" onclick="onClick(this)">
+</div>
+</div>
+
+
+<!-- Photo Grid Medium-->
+<div class="w3-row w3-margin w3-row-padding w3-hide-large w3-hide-small" id="myGrid">
+<div class="w3-col" style="width:33%">
 <img src="images/indexgrid/DSC_2856.jpg" style="width:100%" onclick="onClick(this)">
 <img src="images/outdoors/DSC_3934.png" style="width:100%" onclick="onClick(this)">
 <img src="images/aviation/000669960007.jpg" style="width:100%" onclick="onClick(this)">
 </div>
 
-<div class="w3-col" style="width:25%">
+<div class="w3-col" style="width:33%">
 <img src="images/aviation/DSC_3692.jpg" style="width:100%" onclick="onClick(this)">
 <img src="images/outdoors/DSC_4499.png" style="width:100%" onclick="onClick(this)">
 <img src="images/indexgrid/DSC_0035.jpg" style="width:100%" onclick="onClick(this)">
 </div>
 
-<div class="w3-col" style="width:25%">
+<div class="w3-col" style="width:33%">
 <img src="images/indexgrid/DSC_2702.png" style="width:100%" onclick="onClick(this)">
 <img src="images/aviation/DSC_7480.jpg" style="width:100%" onclick="onClick(this)">
 <img src="images/indexgrid/DSC_9587.jpg" style="width:100%" onclick="onClick(this)">
 </div>
+</div>
 
-<div class="w3-col" style="width:25%">
-<img src="images/indexgrid/DSC_9362.jpg" style="width:100%" onclick="onClick(this)">
-<img src="images/outdoors/DSC_2870.jpg" style="width:100%" onclick="onClick(this)">
-<img src="images/outdoors/DSC_6635.jpg" style="width:100%" onclick="onClick(this)">
+<!-- Photo Grid Small-->
+<div class="w3-row w3-margin w3-row-padding w3-hide-large w3-hide-medium" id="myGrid">
+<div class="w3-col" style="width:50%">
+<img src="images/indexgrid/DSC_2856.jpg" style="width:100%" onclick="onClick(this)">
+<img src="images/outdoors/DSC_3934.png" style="width:100%" onclick="onClick(this)">
+<img src="images/aviation/000669960007.jpg" style="width:100%" onclick="onClick(this)">
+</div>
+
+<div class="w3-col" style="width:50%">
+<img src="images/aviation/DSC_3692.jpg" style="width:100%" onclick="onClick(this)">
+<img src="images/outdoors/DSC_4499.png" style="width:100%" onclick="onClick(this)">
+<img src="images/indexgrid/DSC_0035.jpg" style="width:100%" onclick="onClick(this)">
 </div>
 </div>
+
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-16">
