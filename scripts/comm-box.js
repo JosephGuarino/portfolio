@@ -12,6 +12,7 @@ function defaultOpen(defaultTab) {
 }
 
 window.onload = function() {
-    var defaultTab = 'recent'; // Set the default tab ID
+    var defaultTab = 'dataset'; // Set the default tab ID
     defaultOpen(defaultTab); // Call the function to open the default tab on load
 };
+
