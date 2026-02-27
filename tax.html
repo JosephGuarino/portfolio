@@ -33,6 +33,75 @@
 
 <link href='https://fonts.googleapis.com/css?family=Courier Prime' rel='stylesheet'>
 
+<script>
+
+    $( function() {
+        $( "#drag1" ).draggable();
+    });
+
+    $( function() {
+        $( "#drag2" ).draggable();
+    });
+
+    $( function() {
+        $( "#drag3" ).draggable();
+    });
+
+    $( function() {
+        $( "#drag4" ).draggable();
+    });
+
+    $( function() {
+        $( "#drag5" ).draggable();
+    });
+
+     $( function() {
+        $( "#drag6" ).draggable();
+    });
+
+    $( function() {
+        $( "#drag7" ).draggable();
+    });
+
+    $( function() {
+        $( "#drag8" ).draggable();
+    });
+
+            $( function() {
+        $( "#drag9" ).draggable();
+    });
+
+     $( function() {
+        $( "#drag10" ).draggable();
+    });
+
+                      $( function() {
+        $( "#drag11" ).draggable();
+    });
+
+              $( function() {
+        $( "#drag20" ).draggable();
+    });
+
+                              $( function() {
+        $( "#drag13" ).draggable();
+    });
+                              $( function() {
+        $( "#drag22" ).draggable();
+    });
+      $( function() {
+        $( "#drag23" ).draggable();
+    });
+      $( function() {
+        $( "#drag24" ).draggable();
+    });
+
+
+    // $( function() {
+        // $( "#Remove // before use, and make sure to change this id!" ).draggable();
+    // });
+
+</script>
 
 <style>
 
@@ -99,29 +168,26 @@
             }
 
 
-.wrapper { /*everything goes inside this*/
-  width: 1980px;
-  height: 1080px;
-  display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  align-items: flex-start;
-  }
+            .wrapper {
+              width: 1150px;
+              height: 800px;
+              position: relative;
+              flex-shrink: 0;
+              margin: 0 auto;
+            }
 
-    body {
-      font-family: 'basiic', sans-serif;
-      /* Delete belwo to return to old background */
-      background: rgb(131,58,180);
+      body {
+          font-family: 'basiic', sans-serif;
           background: url('images/nature/DSC_4592.png');
           background-repeat: no-repeat;
           background-attachment: fixed;
           background-size: cover;
-          height: 100vh;
-        font-size: 0.9em;
-        display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  align-items: flex-start;
+          min-height: 100vh;
+          align-items: flex-start;
+          justify-content: center;
+          font-size: 0.9em;
+          overflow-x: auto;
+          display: flex;
     }
 
         </style>
@@ -129,20 +195,25 @@
 </head>
 
 <body>
+  <div class="wrapper">
 
 <!-- ##################### Sitemap ##################### -->
 
-<div class="container" id="drag10" style= width:250px;>
+<div class="container" id="drag10" style="position:absolute; top:0px; left:0px; width:250px;">
         <!-- Header -->
         <div class="box_header">
-            <header>
-                <img style="float: left; width: 9%; height: auto;">
-                &nbsp;<b>Site Map</b>
-            </header>
+          <header>
+              <img style="float: left; width: 9%; height: auto;" src="assets/icons/95computer.png">
+              &nbsp;<b>Site Map</b>
+              <!-- These are the fake buttons at the end of the header. -->
+              <img style="float: right;" src="assets/icons/button_3.png" alt="">
+              <img style="float: right;" src="assets/icons/button_2.png" alt="">
+              <img style="float: right;" src="assets/icons/button_1.png" alt=""
+          </header>
         </div>
 
         <!-- Main Content -->
-        <div class="box" style=height:300px;>
+        <div class="box" style=height:380px;>
             <main>
               <b>General</b>
               <div class=minibox>
@@ -160,7 +231,12 @@
 
               <br><b>Taxidermy</b>
               <div class=minibox>
-              <b>- <a href="taxcollection.html">[Taxidermy Collection]</a> You are here!</b>
+              <b>- <a href="tax.html">[Taxidermy Collection]</a> You are here!</b>
+              </div>
+
+              <br><b>Data</b>
+              <div class=minibox>
+              - <a href="cyclone.html">[NOAA Cyclones]</a>
               </div>
             </main>
         </div>
@@ -169,13 +245,17 @@
 
 <!-- ##################### Buttons ##################### -->
 
-    <div class="container" id="drag1" style="width:650px;">
+    <div class="container" id="drag1" style="position:absolute; top:0px; left:260px; width:650px;">
         <!-- Header -->
         <div class="box_header">
-            <header>
-                <img style="float: left; width: 3.2%; height: auto;">
-                &nbsp;<b>Taxidermy</b>
-            </header>
+          <header>
+              <img style="float: left; width: 3.2%; height: auto;" src="assets/icons/95computer.png">
+              &nbsp;<b>Taxidermy</b>
+              <!-- These are the fake buttons at the end of the header. -->
+              <img style="float: right;" src="assets/icons/button_3.png" alt="">
+              <img style="float: right;" src="assets/icons/button_2.png" alt="">
+              <img style="float: right;" src="assets/icons/button_1.png" alt="">
+          </header>
         </div>
 
 
@@ -210,9 +290,7 @@
                               <a href="images/taxidermy/taxidermycollection/bones/bdeer3.png" style="color: #fff; background-color: #FF0000; text-decoration: none; margin-right: 10px; display: inline-block;">
                                   <font><b>[Deer]</b></font></a>
                                       <a href="images/taxidermy/taxidermycollection/bones/bbobcat1.png" style="color: #fff; background-color: #000; text-decoration: none; margin-right: 10px; display: inline-block;">
-                                          <font><b>[Bobcat]</b></font></a>
-                                          <a href="images/taxidermy/taxidermycollection/bones/bcougar1.png" style="color: #fff; background-color: #FF0000; text-decoration: none; margin-right: 10px; display: inline-block;">
-                                          <font><b>[Cougar]</b></font></a><br><br>
+                                          <font><b>[Bobcat]</b></font></a><br><br>
                                           <a href="images/taxidermy/taxidermycollection/bones/bsquirrel.png" style="color: #fff; background-color: #FF0000; text-decoration: none; margin-right: 10px; display: inline-block;">
                                               <font><b>[Squirrel]</b></font></a>
                                           <a href="images/taxidermy/taxidermycollection/bones/bbobcat2.png" style="color: #fff; background-color: #000; text-decoration: none; margin-right: 10px; display: inline-block;">
@@ -291,24 +369,25 @@
 
 <!-- ##################### Blank ##################### -->
 
-        <div class="container" id="drag9" style="width:250px;">
+      <div class="container" id="drag9" style="position:absolute; top:0px; left:920px; width:200px;">
         <!-- Header -->
         <div class="box_header">
-            <header>
-                <img style="float: left; width: 9%; height: auto;">
-                &nbsp;<b>Misc</b>
-            </header>
+          <header>
+              <img style="float: left; width: 9%; height: auto;" src="assets/icons/95computer.png">
+              &nbsp;<b>Notes</b>
+              <!-- These are the fake buttons at the end of the header. -->
+              <img style="float: right;" src="assets/icons/button_3.png" alt="">
+              <img style="float: right;" src="assets/icons/button_2.png" alt="">
+              <img style="float: right;" src="assets/icons/button_1.png" alt=""
+          </header>
         </div>
 
         <!-- Main Content -->
-        <div class="box" style=height:200px;>
+        <div class="box" style=height:100px;>
 
             <main>
               ** Macerating<br>
               *** Reconstructing<br>
-              <br>
-              Well I got to taking the remaining photos of the skulls that aren't being cleaned. I must say though, the image quality is significantly
-              worse than the previous ones. They will do for now though until I, or if I ever, get around to taking better ones.
             </main>
         </div>
     </div>
@@ -316,7 +395,6 @@
 
 <script src="scripts/comm-box.js"></script>
 
+</div>
 </body>
 </html>
-
-
