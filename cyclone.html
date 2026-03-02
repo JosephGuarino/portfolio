@@ -1,25 +1,14 @@
 <!DOCTYPE html>
 <html lang=en>
 <head>
-
-    <!-- These are tags for how the embded will look. -->
-    <!-- https://scumsuck.com/resources -->
-
     <meta property="og:title" content="Joseph Guarino">
-    <!-- Update the image here with your embed! -->
     <meta property="og:image" content="embed_image.png">
-    <!-- Image here, too! -->
     <meta name="author" content="Joseph Guarino">
-    <!-- Change the colour code to match your website. -->
     <meta content="#accf9d" data-react-helmet="true" name="theme-color">
-
-    <!-- Various other website settings. -->
-    <!-- Keep this in-tact if you want to use unicode in text without it breaking. You shouldn't need to change this. -->
     <meta charset="utf-8">
-    <!-- For setting the viewport for different screen sizes. You shouldn't need to change this. -->
     <meta name="viewport" content="width=device, initial-scale=1">
-    <!-- If you change the name of the stylesheet, make sure to reflect it here. -->
-    <link rel="stylesheet" href="css/style2.css">
+        <link rel="stylesheet" href="css/style2.css">
+
 
     <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
 
@@ -297,14 +286,23 @@
           ✸ Sea Surface Temperature (SST) --> Satellite-derived, gap-filled daily gridded sea surface temperature analysis. It blends retrievals
           from multiple satellite sensors (primarily AVHRR infrared radiometers) with in situ observations to produce a spatially complete regular grid.
         </div>
-        <br></div>
+        <br>
+      </div>
 
         <div id="analysis" class="comm-box">
-          ✸ TextTextTextTextTextTextTextTextText
-      <br></div>
+          <div class = minibox>
+          <div class="w3-row w3-margin w3-row-padding">
+          <div class="w3-col" style="width:100%">
+            <img src="assets/data/plots/bar_SSHS_year.png" style="width:100%" onclick="onClick(this)" alt="">
+            <img src="assets/data/plots/storm_year_hist.png" style="width:100%" onclick="onClick(this)" alt="">
+            <img src="assets/data/plots/wind_change_histogram.png" style="width:100%" onclick="onClick(this)" alt="">
+        </div>
+
       <!-- comm end div -->
     </div>
-
+  </div>
+  </div>
+</div>
 
 <!-- ##################### Small ##################### -->
 
@@ -355,7 +353,32 @@
     </div>
     </div>
 
+
+
+    <script>
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+
+    // Change style of navbar on scroll
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+        var navbar = document.getElementById("myNavbar");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+        } else {
+            navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+        }
+    }
+    </script>
+
+
 <script src="scripts/comm-box.js"></script>
+
 </div>
 </body>
 </html>
