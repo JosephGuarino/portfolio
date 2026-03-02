@@ -15,4 +15,3 @@ window.onload = function() {
     var defaultTab = 'dataset'; // Set the default tab ID
     defaultOpen(defaultTab); // Call the function to open the default tab on load
 };
-
