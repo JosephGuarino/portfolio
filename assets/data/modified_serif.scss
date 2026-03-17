@@ -1,6 +1,7 @@
 /*-- scss:defaults --*/
 
 // Override theme settings
+$presentation-font-size-root: 0.75em; // Add this line
 $font-family-sans-serif: "Palatino Linotype", "Book Antiqua", Palatino,
   FreeSerif, serif !default;
 $body-color: #000 !default;
