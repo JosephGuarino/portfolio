@@ -245,11 +245,15 @@
         </div>
 
         <!-- Main Content -->
-
+        <div id="comm" class="box">
+           <main><center>
+              <button style="background-color: #bfb8bf; color: black;" onclick="toggleComm('dataset')">Dataset</button>
+              <button style="background-color: #bfb8bf; color: black;" onclick="toggleComm('analysis')">Plots</button>
+            </center></main>
+        </div>
         <!-- Pulled out class="comm-box" to get indx to show -->
-        <br>
-        <div id="dataset" class="comm-box" style=height:620px;>
-          <div class=minibox style=height:580px;>
+        <div id="dataset" class="comm-box">
+          <div class=minibox>
           Dataset contains IBTrACS master dataset with the addition of ocean heat flux, precipitation, seaflux, infrared sounder
           retrievals, and sea surface temperatures. <br>
 
@@ -284,6 +288,24 @@
         </div>
         <br>
       </div>
+
+      <div id="analysis" class="comm-box">
+        <div class = minibox>
+        <div class="w3-row w3-margin w3-row-padding">
+        <div class="w3-col" style="width:100%">
+          <img src="assets/data/plots/SSHS_year.png" style="width:100%" onclick="onClick(this)" alt="">
+          <img src="assets/data/plots/LAT_BASIN_facet.png" style="width:100%" onclick="onClick(this)" alt="">
+          <img src="assets/data/plots/RI_LATENT_box.png" style="width:100%" onclick="onClick(this)" alt="">
+          <img src="assets/data/plots/wind_change_histogram.png" style="width:100%" onclick="onClick(this)" alt="">
+          <img src="assets/data/plots/SST_wind_scatter.png" style="width:100%" onclick="onClick(this)" alt="">
+          <img src="assets/data/plots/storm_year_hist.png" style="width:100%" onclick="onClick(this)" alt="">
+      </div>
+
+    <!-- comm end div -->
+  </div>
+</div>
+</div>
+
 </div>
 
 
