@@ -17,6 +17,77 @@ body, html {
 
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
+
+/* Gallery section wrapper */
+.gallery-section {
+  position: relative;
+  text-align: center;
+  font-family: Georgia, serif;
+}
+
+/* Images fill width, fixed height on mobile */
+.gallery-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Overlay label sits on top of image */
+.gallery-overlay {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.gallery-overlay.left  { left: 10%; }
+.gallery-overlay.right { right: 10%; }
+
+.gallery-overlay p {
+  margin: 0;
+  color: white;
+  font-size: 24px;
+}
+
+.gallery-overlay button {
+  font-size: 24px;
+  color: white;
+}
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  .gallery-section img {
+    height: 220px;
+    object-fit: cover;
+  }
+
+  /* Hide the absolute overlay on mobile */
+  .gallery-overlay {
+    display: none;
+  }
+
+  /* Show a label bar beneath the image instead */
+  .gallery-mobile-label {
+    display: block;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-decoration: none;
+  }
+
+  .gallery-mobile-label:hover {
+    background: #444;
+  }
+}
+
+/* Hide mobile labels on larger screens */
+@media (min-width: 601px) {
+  .gallery-mobile-label {
+    display: none;
+  }
+}
 </style>
 </head>
 <body>
@@ -25,8 +96,8 @@ body, html {
   <div class="w3-top">
     <div class="w3-bar" id="myNavbar">
       <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars w3-text-black"></i>
-    </a>
+        <i class="fa fa-bars w3-text-black"></i>
+      </a>
       <a href="index.html" class="w3-bar-item w3-button w3-text-black">HOME</a>
       <a href="portfolio.html" class="w3-bar-item w3-button w3-hide-small w3-text-black"><i class="fa fa-th"></i> PORTFOLIO</a>
       <a href="https://www.flickr.com/photos/201889971@N03/" class="w3-bar-item w3-button w3-hide-small w3-text-black"> FLICKR</a>
@@ -44,115 +115,65 @@ body, html {
     </div>
   </div>
 
-<!--
-  <div class="w3-bar">
-      <a class="w3-button w3-hide-medium w3-hide-large w3-text-white w3-red">
-        <br><i>This site is not yet entirely formatted for mobile devices. A number of pages will work but not all. Best viewed in 1920x1080</i>
-      </a>
+  <!-- Aviation -->
+  <div class="gallery-section w3-opacity-min" id="aviation">
+    <img src="images/parallax/aviation1.png" id="home" alt="Aviation">
+    <div class="gallery-overlay left">
+      <b><p>AVIATION</p>
+      <a href="aviation.html">
+        <button class="w3-button w3-padding-large w3-section w3-border w3-border-white">View Gallery</button>
+      </a></b>
     </div>
-  -->
+    <a href="aviation.html" class="gallery-mobile-label">AVIATION</a>
+  </div>
 
-<!-- Aviation -->
-<div class="w3-display-container w3-opacity-min" id="aviation" style="position: relative; text-align: center; font-family: Georgia, serif;">
-  <img src="images/parallax/aviation1.png" style="width:100%; height:auto;" id="home">
-  <div style="position: absolute; top: 50%; left: 10%; transform: translateY(-50%);" class="w3-hide-small w3-hide-medium">
-    <b><p style="margin: 0; color: white; font-size: 24px;">AVIATION</p>
-    <a href="aviation.html">
-      <button class="w3-button w3-padding-large w3-section w3-border w3-border-white" style="font-size: 24px; color: white;">
-        View Gallery
-      </button></b>
-    </a>
+  <!-- Nature -->
+  <div class="gallery-section w3-opacity-min" id="nature">
+    <img src="images/parallax/DSC_2853.jpg" alt="Nature">
+    <div class="gallery-overlay right">
+      <b><p>NATURE</p>
+      <a href="nature.html">
+        <button class="w3-button w3-padding-large w3-section w3-border w3-border-white">View Gallery</button>
+      </a></b>
+    </div>
+    <a href="nature.html" class="gallery-mobile-label">NATURE</a>
   </div>
-  <div style="position: absolute; top: 50%; left: 10%; transform: translateY(-50%);" class="w3-hide-large">
-    <a href="aviation.html">
-      <button class="w3-button w3-padding-large w3-section w3-border w3-border-white" style="font-size: 24px; color: white;">
-        AVIATION
-      </button>
-    </a>
-  </div>
-</div>
 
+  <!-- Animals -->
+  <div class="gallery-section w3-opacity-min" id="animals">
+    <img src="images/parallax/animal2.png" alt="Animals">
+    <div class="gallery-overlay left">
+      <b><p>ANIMALS</p>
+      <a href="animals.html">
+        <button class="w3-button w3-padding-large w3-section w3-border w3-border-white">View Gallery</button>
+      </a></b>
+    </div>
+    <a href="animals.html" class="gallery-mobile-label">ANIMALS</a>
+  </div>
 
-<!-- Nature -->
-<div class="w3-display-container w3-opacity-min" id="nature" style="position: relative; text-align: center; font-family: Georgia, serif;">
-  <img src="images/parallax/DSC_2853.jpg" style="width:100%; height:auto;">
-  <div style="position: absolute; top: 50%; right: 10%; transform: translateY(-50%);" class="w3-hide-small w3-hide-medium">
-    <b><p style="margin: 0; color: white; font-size: 24px;">NATURE</p>
-    <a href="nature.html">
-    <button class="w3-button w3-padding-large w3-section w3-border w3-border-white" style="font-size: 24px; color: white;">
-      View Gallery
-    </button></b>
-  </a>
+  <!-- Astrophotography -->
+  <div class="gallery-section w3-opacity-min" id="astro">
+    <img src="images/parallax/eclipseparallax.png" alt="Astrophotography">
+    <div class="gallery-overlay right">
+      <b><p>ASTROPHOTOGRAPHY</p>
+      <a href="astro.html">
+        <button class="w3-button w3-padding-large w3-section w3-border w3-border-white">View Gallery</button>
+      </a></b>
+    </div>
+    <a href="astro.html" class="gallery-mobile-label">ASTROPHOTOGRAPHY</a>
   </div>
-  <div style="position: absolute; top: 50%; right: 10%; transform: translateY(-50%);" class="w3-hide-large">
-    <a href="outdoors.html">
-      <button class="w3-button w3-padding-large w3-section w3-border w3-border-white" style="font-size: 24px; color: white;">
-        NATURE
-      </button>
-    </a>
-  </div>
-</div>
 
-
-<!-- Animals  -->
-<div class="w3-display-container w3-opacity-min" id="animals" style="position: relative; text-align: center; font-family: Georgia, serif;">
-  <img src="images/parallax/animal2.png" style="width:100%; height:auto;">
-  <div style="position: absolute; top: 50%; left: 10%; transform: translateY(-50%);" class="w3-hide-small w3-hide-medium">
-    <b><p style="margin: 0; color: white; font-size: 24px;">ANIMALS</p>
-    <a href="animals.html">
-    <button class="w3-button w3-padding-large w3-section w3-border w3-border-white" style="font-size: 24px; color: white;">
-      View Gallery
-    </button></b>
-  </a>
+  <!-- Misc -->
+  <div class="gallery-section w3-opacity-min" id="misc">
+    <img src="images/parallax/misc1.jpg" alt="Misc">
+    <div class="gallery-overlay left">
+      <b><p>MISC</p>
+      <a href="misc.html">
+        <button class="w3-button w3-padding-large w3-section w3-border w3-border-white">View Gallery</button>
+      </a></b>
+    </div>
+    <a href="misc.html" class="gallery-mobile-label">MISC</a>
   </div>
-  <div style="position: absolute; top: 50%; left: 10%; transform: translateY(-50%);" class="w3-hide-large">
-    <a href="animals.html">
-      <button class="w3-button w3-padding-large w3-section w3-border w3-border-white" style="font-size: 24px; color: white;">
-        ANIMALS
-      </button>
-    </a>
-  </div>
-</div>
-
-<!-- Astrophotography -->
-<div class="w3-display-container w3-opacity-min" id="astro" style="position: relative; text-align: center; font-family: Georgia, serif;">
-  <img src="images/parallax/eclipseparallax.png" style="width:100%; height:auto;">
-  <div style="position: absolute; top: 50%; right: 10%; transform: translateY(-50%);" class="w3-hide-small w3-hide-medium">
-    <b><p style="margin: 0; color: white; font-size: 24px;">ASTROPHOTOGRAPHY</p>
-    <a href="astro.html">
-    <button class="w3-button w3-padding-large w3-section w3-border w3-border-white" style="font-size: 24px; color: white;">
-      View Gallery
-    </button></b>
-  </a>
-  </div>
-  <div style="position: absolute; top: 50%; right: 10%; transform: translateY(-50%);" class="w3-hide-large">
-    <a href="felines.html">
-      <button class="w3-button w3-padding-large w3-section w3-border w3-border-white" style="font-size: 24px; color: white;">
-        ASTRO
-      </button>
-    </a>
-  </div>
-</div>
-
-<!-- Misc -->
-<div class="w3-display-container w3-opacity-min" id="misc" style="position: relative; text-align: center; font-family: Georgia, serif;">
-  <img src="images/parallax/misc1.jpg" style="width:100%; height:auto;">
-  <div style="position: absolute; top: 50%; left: 10%; transform: translateY(-50%);" class="w3-hide-small w3-hide-medium">
-    <b><p style="margin: 0; color: white; font-size: 24px;">MISC</p>
-    <a href="misc.html">
-    <button class="w3-button w3-padding-large w3-section w3-border w3-border-white" style="font-size: 24px; color: white;">
-      View Gallery
-    </button></b>
-  </a>
-  </div>
-  <div style="position: absolute; top: 50%; left: 10%; transform: translateY(-50%);" class="w3-hide-large">
-    <a href="film.html">
-      <button class="w3-button w3-padding-large w3-section w3-border w3-border-white" style="font-size: 24px; color: white;">
-        MISC
-      </button>
-    </a>
-  </div>
-</div>
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-16">
@@ -160,9 +181,7 @@ body, html {
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
 
-
 <script>
-// Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
 function myFunction() {
     var navbar = document.getElementById("myNavbar");
@@ -173,7 +192,6 @@ function myFunction() {
     }
 }
 
-// Used to toggle the menu on small screens when clicking on the menu button
 function toggleFunction() {
     var x = document.getElementById("navDemo");
     if (x.className.indexOf("w3-show") == -1) {
@@ -186,4 +204,3 @@ function toggleFunction() {
 
 </body>
 </html>
-
