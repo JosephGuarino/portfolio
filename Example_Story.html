@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Example Story</title>
+<style>html{background:#ffffff}body{margin:0;color:#222222;background:#ffffff;font-family:Georgia, serif;font-size:14px;line-height:1.8;-webkit-text-size-adjust:100%}.book{box-sizing:content-box;max-width:600px;margin:0 auto;padding:45px 22px 60px;text-align:left;overflow-wrap:break-word}.title{font-weight:700;font-size:1.6em;line-height:1.25;margin:0 0 1.4em;text-align:left;hyphens:none}.para{margin:0 0 1em;text-indent:0em}.para>div,.para>p{margin:1em 0 0}.para>div:first-child,.para>p:first-child{margin-top:0}.note{color:#707782}.picked{display:inline-block;max-width:100%;border:1.5px solid #858b94;background:#ffffff;color:#222222;border-radius:5px;padding:2px 7px;font:inherit;line-height:1.55;text-align:left;text-indent:0;cursor:pointer}.alternatives{display:flex;flex-direction:column;align-items:flex-start;gap:3px;margin:3px 0 15px 14px;padding-left:9px;border-left:1px solid #d9dde3}.alt{max-width:95%;border:1px solid #c7cbd2;border-radius:5px;background:#f0f1f3;color:#737985;padding:3px 8px;cursor:pointer;text-align:left}.alt:hover{filter:brightness(.96)}@media(max-width:600px){.book{padding:24px 18px 40px}}</style></head><body><div class="book"><h1 class="title" id="title"></h1><main id="story"></main></div><script>(function storyRuntime(DATA,CFG) {
+  const chosen= {
+  }
+  ;
+  const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>( {
+    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+  }
+  [c]));
+  const find=id=>DATA.passages.find(p=>p.id===id);
+  const root=document.getElementById('story'),titleEl=document.getElementById('title');
+  if(titleEl)titleEl.textContent=DATA.title||'Untitled Story';
+  function render() {
+    root.innerHTML='';
+    const seen=new Set();
+    function draw(id,d) {
+      if(d>60||seen.has(id)) {
+        const n=document.createElement('p');
+        n.className='note';
+        n.textContent='[Story path stopped: circular passage reference]';
+        root.appendChild(n);
+        return
+      }
+      const pass=find(id);
+      if(!pass)return;
+      seen.add(id);
+      for(const b of pass.blocks) {
+        if(b.type==='text') {
+          const p=document.createElement('p');
+          p.className='para';
+          p.innerHTML=b.html||'';
+          root.appendChild(p)
+        } else if(b.type==='choice') {
+          const opts=b.options||[],opt=opts.find(o=>o.id===chosen[b.id])||opts[0];
+          if(!opt)continue;
+          chosen[b.id]=opt.id;
+          const st=CFG.globalChoice? {
+          }
+          :(CFG.individual[b.id]|| {
+          }
+          );
+          const fam=st.font&&st.font!=='inherit'?st.font:(CFG.globalChoice&&CFG.choiceFont!=='inherit'?CFG.choiceFont:CFG.font);
+          const base=CFG.globalChoice?CFG.choiceSize:(Number(st.size)||CFG.size/CFG.scale)*CFG.scale;
+          const alt=CFG.globalChoice?CFG.altSize:base*.84;
+          const picked=document.createElement('button');
+          picked.className='picked';
+          picked.style.fontFamily=fam;
+          picked.style.fontSize=base+'px';
+          picked.innerHTML=opt.html||esc(opt.text);
+          picked.onclick=()=> {
+            chosen[b.id]=opt.id;render()
+          }
+          ;
+          root.appendChild(picked);
+          const alts=document.createElement('div');
+          alts.className='alternatives';
+          opts.filter(o=>o.id!==opt.id).forEach(o=> {
+            const btn=document.createElement('button');
+            btn.className='alt';
+            btn.style.fontFamily=fam;
+            btn.style.fontSize=alt+'px';
+            btn.innerHTML=o.html||esc(o.text);
+            btn.onclick=()=> {
+              chosen[b.id]=o.id;render()
+            }
+            ;
+            alts.appendChild(btn)
+          }
+          );
+          if(alts.childElementCount)root.appendChild(alts);
+          if(opt.target&&opt.target!==pass.id)draw(opt.target,d+1);
+        } else if(b.type==='jump') {
+          draw(b.target,d+1);
+          return
+        }
+      }
+    }
+    draw(DATA.start,0)
+  }
+  render()
+})({"title":"Example Story","start":"opening","passages":[{"id":"opening","title":"Opening","blocks":[{"id":"pqfoe2lh","type":"text","html":"\u003cdiv>Fletcher’s cigarette glowed a final time as she stepped under the awning. “Decided to actually get up and do some work, huh?” He joked as he snubbed the cigarette and pushed himself off the wall.\u003c/div>\u003cdiv>Astrid did not meet his outstretched hand or match his joviality. “Last I checked my hours did not include any time after five or the weekend,” she grumbled and did her best to shake off as much water as possible. “I can’t imagine anything you’re about to say is going to make my evening, especially as I had to walk through the rain to get here.”&nbsp;&nbsp;\u003c/div>\u003cdiv>“Alight, alright. I hear you.” He offered his hands up in a feigned apology. “We both know you could have just hung up on me. However, I called you because I knew you wouldn’t.” When his slight smile didn’t abate her irked expression, he quickly continued. “Okay, remember something like four months ago when we had gotten that notice for those stolen chips and cards from Sapporo?”&nbsp;&nbsp;\u003c/div>\u003cdiv>He answered his own question with a wave of his hand. “Of course you do, we were both stuck there in the damned middle of winter for two weeks trying to track anything down. Obviously we came up with nothing and it just got pushed off to the side with all the other reports. Who really cares about some chips anyways, right?”&nbsp;&nbsp;\u003c/div>\u003cdiv>The raindrops fell heavier and faster against the pavement, the wind leading to the awning being far less useful. Fletcher motioned for her to follow him through the open doorframe. The inside was even more disparate than the outside. Raw concrete was scarcely visible under the plethora of graffiti, stickers, and growing piles of trash in the corners.&nbsp;&nbsp;\u003c/div>\u003cdiv>“Well, that shipping company got busted the other month for having a side gig. Somehow, we don’t know yet, they were getting their hands on spare military components. Through some information from a contact I was able to establish in Sapporo I’m certain that the stolen shipment all those months ago was military chips and cards.”\u003c/div>"},{"id":"4ojvsq74","type":"choice","options":[{"id":"5df7scz4","text":"Her vexed expression had faded for confusion. “So why are we here, now? You’re telling me an entire shipment of military shit ended up in this decrepit building.” She looked around for a moment once again. The place looked like it would be more at home leading down into one of the discharge channels. “They would condemn this place if it were in the city center.”","html":"Her vexed expression had faded for confusion. “So why are we here, now? You’re telling me an entire shipment of military shit ended up in this decrepit building.” She looked around for a moment once again. The place looked like it would be more at home leading down into one of the discharge channels. “They would condemn this place if it were in the city center.”","target":"30smf3qi"},{"id":"4hdvhjsl","text":"She gave a reluctant sigh as she ran a hand over her face. \"I hope you're not dragging me into another situation like down south.\" If Fletcher hadn't received an equivalent roughing up then she would have done so herself.","html":"She gave a reluctant sigh as she ran a hand over her face. &quot;I hope you&#39;re not dragging me into another situation like down south.&quot; If Fletcher hadn&#39;t received an equivalent roughing up then she would have done so herself.","target":"44t1yolm"}]}]},{"id":"30smf3qi","title":"original_1","blocks":[{"id":"7zk4bojm","type":"text","html":"\u003cdiv>“Not the whole shipment, no. If that were the case, I wouldn't put my life on the line trying to see what’s going on. Let the boys in black handle that. No, that contact had given me a handful of serials that were in that shipment, one belonging to a card popped here connecting to the array a few hours ago.”\u003c/div>\u003cdiv>“Why didn’t you put it into the system?”\u003c/div>\u003cdiv>“I did, I did.” He quickly said, alleviating her. “It’s not like I’m trying to do things off the book. I filed it as soon as I got the information and made the connection, but you know how slow things can be. We’re allowed to act with our best sense of judgement. I think it’s best if we act now since we know that something’s here. We get the person and the card and by the time the system catches up with the request we’ll already have what we need to make another if need be.”\u003c/div>"},{"id":"kbb14ba8","type":"choice","options":[{"id":"xgk05k5n","text":"She rolled her eyes. “And I suppose you wouldn’t settle on one of the greens from the station to come out, Fletched. You know that at least one of them would have jumped at the chance to do something at this hour.”","html":"She rolled her eyes. “And I suppose you wouldn’t settle on one of the greens from the station to come out, Fletched. You know that at least one of them would have jumped at the chance to do something at this hour.”","target":"sst1owfi"},{"id":"edp79yqt","text":"\"You seem to be forgetting what happened last time you did something similar,\" she groaned. \"You're not the one currently nursing a broken rib.\"","html":"&quot;You seem to be forgetting what happened last time you did something similar,&quot; she groaned. &quot;You&#39;re not the one currently nursing a broken rib.&quot;","target":"8324i1kp"}]}],"origin":"opening"},{"id":"sst1owfi","title":"end","blocks":[{"id":"vh6eagfo","type":"text","html":"\u003cdiv>“Give them a gun and tell them to get behind me?” Fletcher shook his head, “they’d be more likely to shoot me if something happened. We both worked the case in Sapporo, makes sense to keep going. Besides, you know that if we get something good from this you can squeeze Iman for an extra day or two off while the lab is going through it.\u003c/div>\u003cdiv>“If someone is getting hurt I hope it’s you this time. You're the reason I caught that pipe, it's only fair you get some repayment for that and calling me out here, in the rain, to kick down another door.”\u003c/div>\u003cdiv>“Well, perhaps if you didn’t go straight to kicking things that wouldn’t have been a problem.”&nbsp;&nbsp;\u003c/div>\u003cdiv>Astrid contained her frustration. “I’m going to assume it’s on the top floor since this lift doesn’t seem to be working. Not that I would trust it anyways.”\u003c/div>\u003cdiv>“Fifth floor.” Fletcher motioned up the narrow winding staircase.&nbsp; S\u003c/div>\u003cdiv>he followed after him slowly, trying to avoid stepping on any of the trash covering the stairs. Leaning over and looking up the narrow gap she was relieved that they only had to go up five flights of stairs. Her side was going to hurt even more by the end of it, but at least it wasn’t to where the stairs disappeared into the distance above her.\u003c/div>"}],"origin":"30smf3qi"},{"id":"10jcokj8","title":"new_2","blocks":[{"id":"piwjlm12","type":"text","html":""}],"origin":"30smf3qi"},{"id":"1lr5u775","title":"New passage","blocks":[{"id":"e6zhjjsx","type":"text","html":""}],"origin":"30smf3qi"},{"id":"8324i1kp","title":"c1","blocks":[{"id":"doc13ux2","type":"text","html":"\u003cdiv>Fletcher grimaced. \"I've said I was sorry. I had the most up to date information and it ended up being wrong. I didn't know there were so many of them.\"\u003c/div>\u003cdiv>\"And I hope your information is more up to date this time, for your own sake.\" She said with wry. \"If I end up with so much as another bruise I'm blocking your number.\"\u003c/div>\u003cdiv>She looked up the stairwell as far as she could manage at the floors above. \"Or I'll just pass the information along to the others in the office. I mean, look at this place.\" She picked a broken chunk of concrete across the floor as if to emphasize her point. \"I wouldn't be too surprised if part of this place came down on us. Just send one of the green out here. Give them a gun and tell them they get a bonus if they find anything.\"\u003c/div>"},{"id":"a8d63eek","type":"jump","target":"sst1owfi"}],"origin":"30smf3qi"},{"id":"44t1yolm","title":"new_1","blocks":[{"id":"xmhdnpan","type":"text","html":"\u003cdiv>Fletcher winced, \"No, no. Nothing like that. From what I was able to find its only a piece or two. I wouldn't want to place myself anywhere where the full shipment showed up but this is the first lead we've gotten for this stuff.\"\u003c/div>\u003cdiv>\"Why not send a proper team from the office?\" She questioned as she let her back hit the wall, letting out another sigh. \"I wouldn't have to be out here and wouldn't have gotten soaking wet.\"\u003c/div>\u003cdiv>\"Calling out the office would have taken some time, you know slow they move at times. We’re allowed to act with our best sense of judgement. I think it’s best if we act now since we know that something’s here. We get the person and the card and by the time the system catches up with the request we’ll already have what we need to make another if need be.”\u003c/div>\u003cdiv>\"Just give them a gun and tell them to get to work, that is their job after.\"\u003c/div>"},{"id":"4stzceli","type":"jump","target":"sst1owfi"}],"origin":"opening"}]},{"font":"Georgia, serif","size":14,"scale":1,"globalChoice":true,"choiceFont":"inherit","choiceSize":14,"altSize":12,"individual":{}});</script></body></html>
